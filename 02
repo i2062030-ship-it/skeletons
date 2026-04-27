@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Premium Video Editing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">MAXENCORE</div>
+  <nav>
+    <a href="#">Обо мне</a>
+    <a href="#">Услуги</a>
+    <a href="#">Портфолио</a>
+    <a href="#">Процесс</a>
+    <a href="#">Отзывы</a>
+    <a href="#">Контакты</a>
+  </nav>
+  <button class="btn-outline">Обсудить проект</button>
+</header>
+
+<section class="hero">
+  <div class="hero-left">
+    <p class="tag">ПРЕМИУМ ВИДЕОМОНТАЖ</p>
+
+    <h1>
+      Я создаю <br>
+      <span>кино</span> из каждого кадра
+    </h1>
+
+    <p class="description">
+      Профессиональный видеомонтаж, который усиливает эмоции,
+      продаёт идеи и остаётся в памяти.
+    </p>
+
+    <div class="buttons">
+      <button class="btn-main">Смотреть портфолио</button>
+      <button class="btn-secondary">Связаться</button>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="screen">
+      <img src="preview.jpg" alt="video preview">
+      <div class="timeline"></div>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div>7+ лет опыта</div>
+  <div>150+ проектов</div>
+  <div>98% довольных клиентов</div>
+</section>
+
+</body>
+</html>
