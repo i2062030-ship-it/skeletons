@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0F0F0F;
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 60px;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  color: #aaa;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #FF8C00;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.btn-outline {
+  border: 1px solid #FF8C00;
+  background: transparent;
+  color: #FF8C00;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 60px;
+}
+
+.hero-left {
+  max-width: 550px;
+}
+
+.tag {
+  color: #FF8C00;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: #FF8C00;
+}
+
+.description {
+  margin: 20px 0;
+  color: #bbb;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 30px;
+}
+
+.btn-main {
+  background: linear-gradient(45deg, #FF8C00, #D35400);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  margin-right: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  border: 1px solid #444;
+  padding: 15px 25px;
+  border-radius: 30px;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  position: relative;
+}
+
+.screen {
+  width: 500px;
+  height: 300px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(255, 140, 0, 0.2);
+}
+
+.screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  background: linear-gradient(90deg, #D35400, #FF8C00);
+  opacity: 0.7;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  border-top: 1px solid #222;
+  color: #FFCC33;
+  font-weight: bold;
+}
