@@ -971,52 +971,92 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   </div>
 </section>
 
-<section id="faq" style="padding: 100px 0; overflow: hidden;">
-  <div class="faq-layout" style="display: flex; gap: 80px; align-items: flex-start; flex-wrap: wrap;">
+<!-- FAQ -->
+
+<section id="faq">
+
+  <section id="faq" style="padding: 100px 0;">
+
+  <div class="faq-layout" style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start;">
+
     
+
     <div class="faq-left" style="flex: 1; min-width: 300px; max-width: 450px;">
+
       <div class="section-eyebrow">Частые вопросы</div>
+
       <h3 class="section-title" style="margin-bottom: 25px; line-height: 1.1;">
+
         ЕСТЬ <span class="accent">ВОПРОСЫ?</span>
+
       </h3>
+
       <p class="section-desc" style="margin-bottom: 40px;">
+
         Собрал самые частые — если не нашли ответ, просто напишите.
+
       </p>
+
       
-      <div class="faq-visual-box" style="position: relative; margin-top: 40px;">
+
+      <div class="faq-visual-box">
+
         <div class="faq-visual-orb"></div>
-        <div class="faq-glyph" style="display: flex; justify-content: center; height: 300px; position: relative; z-index: 2;">
-          <img src="lampochka.png" style="max-height: 100%; max-width: 100%; object-fit: contain;">
+
+        <div class="faq-glyph" style="display: flex; justify-content: center; height: 250px;">
+
+           <img src="lampochka.png" style="max-height: 100%; object-fit: contain;">
+
         </div>
-        <div class="faq-visual-text" style="text-align: center; margin-top: 20px;">
-          Нет глупых вопросов.<br>Есть только хорошее видео.
-        </div>
+
       </div>
+
     </div>
 
+
+
     <div class="faq-list" style="flex: 1.5; min-width: 320px;">
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Как передать исходные материалы?<div class="faq-icon">+</div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Работаю с любым облачным хранилищем: Google Drive, Яндекс Диск, Dropbox, WeTransfer.</div></div>
-      </div>
-      
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Сколько времени занимает монтаж?<div class="faq-icon">+</div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Ролик до 5 минут — 2–3 рабочих дня. Точные сроки обговариваются на брифинге.</div></div>
-      </div>
 
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Что входит в «правки»?<div class="faq-icon">+</div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Корректировка темпа, порядка сцен, замена музыки, цветокоррекция.</div></div>
-      </div>
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Как передать исходные материалы?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Работаю с любым облачным хранилищем: Google Drive, Яндекс Диск, Dropbox, WeTransfer. После оформления заказа отправлю ссылку на папку. Обычно 10–15 минут для передачи материалов.</div></div></div>
 
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">Как происходит оплата?<div class="faq-icon">+</div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Предоплата 50% перед стартом, остаток — после принятия финальной версии.</div></div>
-      </div>
-      </div>
+
+
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Сколько времени занимает монтаж?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Ролик до 5 минут — 2–3 рабочих дня. Длинные форматы до 20 минут — 4–6 дней. Срочные заказы — за доп. оплату (24 часа). Точные сроки обговариваются на брифинге.</div></div></div>
+
+
+
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Что входит в «правки»?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Корректировка темпа, порядка сцен, замена музыки, изменение текста титров, цветокоррекция. Не входит: полный перемонтаж с нуля или замена концепции после утверждения структуры.</div></div></div>
+
+
+
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">В каких форматах сдаёте финальный файл?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">MP4 (H.264/H.265) в нужном разрешении: 1080p, 4K, вертикальный 9:16, квадратный 1:1. По запросу — ProRes. Всё оптимизировано под платформу публикации.</div></div></div>
+
+
+
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Нужен ли мне сценарий заранее?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Нет. Если есть только сырые съёмки — я сам выстрою структуру и нарратив. Главное — понять вашу цель и аудиторию, остальное беру на себя.</div></div></div>
+
+
+
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Как происходит оплата?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Предоплата 50% перед стартом, остаток — после принятия финальной версии. Принимаю переводы на карту (Сбербанк, Тинькофф), по счёту для юрлиц. Работаю по договору.</div></div></div>
+
+
+
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Можно ли начать с одного ролика?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Да, конечно. Многие начинают с тестового заказа по тарифу «Старт». Никаких долгосрочных обязательств не требую.</div></div></div>
+
+
+
+      <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Работаете с иностранными клиентами?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Да, работаю с клиентами из СНГ и других стран. Общаюсь на русском и английском. Оплату принимаю в рублях, долларах, евро. Коммуникация через Telegram, WhatsApp, Discord.</div></div></div>
+
+
+
+    </div>
+
+
 
   </div>
+
+
+
 </section>
 
 <!-- CTA -->
