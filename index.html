@@ -787,41 +787,21 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
     <a href="#contact" class="btn-secondary">Заказать похожее →</a>
   </div>
+
   <div class="portfolio-filters">
     <button class="pf-tab active" onclick="filterPortfolio('all',this)">Все работы</button>
     <button class="pf-tab" onclick="filterPortfolio('reels',this)">Reels</button>
-    <button class="pf-tab" onclick="filterPortfolio('Logo Animation',this)">Logo</button>
-    <button class="pf-tab" onclick="filterPortfolio('promo',this)">promo</button>
-    <button class="pf-tab" onclick="filterPortfolio('motion',this)">motion</button>
+    <button class="pf-tab" onclick="filterPortfolio('logo',this)">Logo</button>
+    <button class="pf-tab" onclick="filterPortfolio('promo',this)">Promo</button>
+    <button class="pf-tab" onclick="filterPortfolio('motion',this)">Motion</button>
   </div>
+
   <div class="portfolio-grid" id="portfolioGrid">
 
-    <!-- ═══════════════════════════════════════════════════════════
-         📹 КАК ДОБАВИТЬ СВОЁ ВИДЕО:
-         1. Положите файл (mp4/webm) в папку сайта
-         2. Замените src="your-video-1.mp4" на путь к вашему видео
-         3. poster="your-cover-1.jpg" — обложка до воспроизведения
-         4. Можно добавить/убрать autoplay muted loop playsinline
-         ═══════════════════════════════════════════════════════════ -->
-
-    <div class="pf-card featured aos" data-category="Logo">
+    <!-- ПРОЕКТ 01: LOGO -->
+    <div class="pf-card featured aos" data-category="logo">
       <div class="pf-thumb">
-        <!--
-          Вариант A — прямо встроенное видео (mp4):
-          Замените src на ваш файл. poster — обложка.
-        -->
-        <video
-          src="logoanimationmp.mp4"
-          poster="logo1.png"
-          muted loop playsinline preload="metadata"
-          onmouseenter="this.play()"
-          onmouseleave="this.pause();this.currentTime=0"
-        ></video>
-        <!--
-          Вариант B — обложка + открыть полное видео по клику:
-          Раскомментируйте img ниже и удалите video выше.
-          <img src="kubok.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-        -->
+        <video src="logoanimationmp.mp4" poster="logo1.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
         <div class="pf-shimmer"></div>
         <div class="pf-cat">Logo Animation</div>
         <div class="pf-duration">0:02</div>
@@ -830,16 +810,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="pf-info">
         <div class="pf-num">ПРОЕКТ 01</div>
         <div class="pf-project-title">Отраслевой Стандарт.</div>
-        <div class="pf-project-desc">Демонстрация возможностей motion design для ниши Архитектуры. Авторский подход к современной "вау" анимации.</div>
-        <div class="pf-tags"><span class="pf-tag">Logo</span><span class="pf-tag">After Effects</span><span class="pf-tag">Motion Design</span></div>
+        <div class="pf-project-desc">Демонстрация возможностей motion design для ниши Архитектуры.</div>
+        <div class="pf-tags"><span class="pf-tag">Logo</span><span class="pf-tag">After Effects</span></div>
       </div>
     </div>
 
+    <!-- ПРОЕКТ 02: REELS -->
     <div class="pf-card aos" data-category="reels">
       <div class="pf-thumb">
-        <!-- 📹 Замените src на свой файл -->
         <video src="defianim.mp4" poster="defianimnew.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-        <div class="pf-thumb-bg" style="opacity:.5"><svg width="60" height="100" viewBox="0 0 60 100"><rect x="5" y="5" width="50" height="90" rx="4" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="20,37 20,63 44,50" fill="#FF5500"/></svg></div>
         <div class="pf-shimmer"></div>
         <div class="pf-cat">Reels</div>
         <div class="pf-duration">0:17</div>
@@ -847,17 +826,16 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       </div>
       <div class="pf-info">
         <div class="pf-num">ПРОЕКТ 02</div>
-        <div class="pf-project-title">Reels для Флагманского Криптотерминала.</div>
-        <div class="pf-project-desc">Концепция: Визуализация универсальности продукта через ритмическую смену окружения.
-Результат: Создан премиальный темпо-ритм, который удерживает внимание на продукте, наглядно демонстрируя его адаптивность под любой вид ритейла.</div>
+        <div class="pf-project-title">Reels для Криптотерминала.</div>
+        <div class="pf-project-desc">Создан премиальный темпо-ритм для удержания внимания.</div>
         <div class="pf-tags"><span class="pf-tag">Reels</span><span class="pf-tag">Dubai Business</span></div>
       </div>
     </div>
 
-    <div class="pf-card aos" data-category="promo">
+    <!-- ПРОЕКТ 03: MOTION (Раньше был Promo) -->
+    <div class="pf-card aos" data-category="motion">
       <div class="pf-thumb">
         <video src="Introduction.mp4" poster="Introduction.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-        <div class="pf-thumb-bg" style="opacity:.5"><svg width="80" height="60" viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" rx="3" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="28,18 28,42 52,30" fill="#FF5500"/></svg></div>
         <div class="pf-shimmer"></div>
         <div class="pf-cat">Motion</div>
         <div class="pf-duration">0:10</div>
@@ -866,16 +844,15 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="pf-info">
         <div class="pf-num">ПРОЕКТ 03</div>
         <div class="pf-project-title">Концептуальное промо «Архитектура монтажа».</div>
-        <div class="pf-project-desc">Концепция: Погружение зрителя в 3D-пространство через механику взаимодействия.
-Результат: Ролик наглядно транслирует философию бренда: монтаж — это не склейка, а путь, по которому мы ведем зрителя к целевому действию.</div>
-        <div class="pf-tags"><span class="pf-tag">After Effects</span><span class="pf-tag">Motion</span></div>
+        <div class="pf-project-desc">Погружение зрителя в 3D-пространство через механику взаимодействия.</div>
+        <div class="pf-tags"><span class="pf-tag">Motion</span><span class="pf-tag">After Effects</span></div>
       </div>
     </div>
 
-    <div class="pf-card aos" data-category="motion">
+    <!-- ПРОЕКТ 04: PROMO (Раньше был Motion) -->
+    <div class="pf-card aos" data-category="promo">
       <div class="pf-thumb">
         <video src="defibest.mp4" poster="defibest.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-        <div class="pf-thumb-bg" style="opacity:.5"><svg width="80" height="60" viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" rx="3" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="28,18 28,42 52,30" fill="#FF5500"/></svg></div>
         <div class="pf-shimmer"></div>
         <div class="pf-cat">Промо</div>
         <div class="pf-duration">0:09</div>
@@ -883,17 +860,16 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       </div>
       <div class="pf-info">
         <div class="pf-num">ПРОЕКТ 04</div>
-        <div class="pf-project-title">Информационный блок по теме Безопасности Крипто-Активов.</div>
-        <div class="pf-project-desc">Концепция: Разработка уникальной айдентики новостного блока. Использование сложной анимации пролетов для создания ощущения масштаба и экспертности.
-Результат: Визуал упаковывает сложную финансовую тему в формат «Новостного ТВ», вызывая мгновенное доверие к контенту и бренду.</div>
-        <div class="pf-tags"><span class="pf-tag">Crypto</span><span class="pf-tag">Business</span></div>
+        <div class="pf-project-title">Безопасность Крипто-Активов.</div>
+        <div class="pf-project-desc">Визуал упаковывает сложную тему в формат «Новостного ТВ».</div>
+        <div class="pf-tags"><span class="pf-tag">Promo</span><span class="pf-tag">Crypto</span></div>
       </div>
     </div>
 
+    <!-- ПРОЕКТ 05: REELS -->
     <div class="pf-card aos" data-category="reels">
       <div class="pf-thumb">
         <video src="vistavka.mp4" poster="vistavka.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-        <div class="pf-thumb-bg" style="opacity:.5"><svg width="60" height="100" viewBox="0 0 60 100"><rect x="5" y="5" width="50" height="90" rx="4" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="20,37 20,63 44,50" fill="#FF5500"/></svg></div>
         <div class="pf-shimmer"></div>
         <div class="pf-cat">Shorts</div>
         <div class="pf-duration">0:09</div>
@@ -901,31 +877,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       </div>
       <div class="pf-info">
         <div class="pf-num">ПРОЕКТ 05</div>
-        <div class="pf-project-title">Масштабный кейс для выставки в Красноярском крае.</div>
-        <div class="pf-project-desc">Концепция: Создание многослойных сцен (Scene Building) с интеграцией 3D-моделей флота. Особый акцент на иммерсивный саунд-дизайн (SFX), заменяющий голос диктора и создающий эффект присутствия.
-​Результат: Ролик-путешествие, который превращает производственный отчет в эпическое кино. Идеальный пример работы с большими форматами без потери динамики.</div>
-        <div class="pf-tags"><span class="pf-tag">Выставка</span><span class="pf-tag">3D</span></div>
+        <div class="pf-project-title">Кейс для выставки.</div>
+        <div class="pf-project-desc">Создание многослойных сцен с интеграцией 3D-моделей флота.</div>
+        <div class="pf-tags"><span class="pf-tag">3D</span><span class="pf-tag">Reels</span></div>
       </div>
     </div>
 
   </div>
 </section>
-
-<!-- VIDEO MODAL (для локальных файлов) -->
-<div class="pf-modal-overlay" id="videoModal" onclick="closeVideo(event)">
-  <div class="pf-modal-inner">
-    <div style="position:relative;width:100%;aspect-ratio:16/9;background:#000">
-      <video id="modalVideo" style="width:100%;height:100%;display:block" controls></video>
-    </div>
-    <div style="padding:16px 24px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
-      <div>
-        <div id="modalTitle" style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:#fff"></div>
-        <div id="modalSub" style="color:var(--text-dim);font-size:.8rem;margin-top:4px"></div>
-      </div>
-      <button onclick="closeVideoBtn()" style="background:rgba(255,85,0,.1);border:1px solid rgba(255,85,0,.3);color:var(--fire);padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;font-size:11px;letter-spacing:1px;text-transform:uppercase">Закрыть ✕</button>
-    </div>
-  </div>
-</div>
 
 <!-- PRICING -->
 <section id="pricing">
