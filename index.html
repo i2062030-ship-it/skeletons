@@ -22,17 +22,17 @@ html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--deep);color:var(--text);overflow-x:hidden;cursor:none}
 body::before{content:'';position:fixed;inset:0;background-image:radial-gradient(circle at 15% 50%,rgba(255,85,0,0.05) 0%,transparent 50%),radial-gradient(circle at 85% 30%,rgba(255,85,0,0.07) 0%,transparent 40%),url("https://www.transparenttextures.com/patterns/carbon-fibre.png");pointer-events:none;z-index:0;opacity:0.7}
 body::after{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999;opacity:0.35}
-
+ 
 /* CURSOR */
 .cursor{width:12px;height:12px;background:var(--fire);border-radius:50%;position:fixed;pointer-events:none;z-index:99999;transform:translate(-50%,-50%);transition:width .2s,height .2s,background .2s;mix-blend-mode:screen}
 .cursor-ring{width:36px;height:36px;border:1px solid rgba(255,85,0,.5);border-radius:50%;position:fixed;pointer-events:none;z-index:99998;transform:translate(-50%,-50%);transition:all .15s ease}
 @media(pointer:coarse){.cursor,.cursor-ring{display:none}}
-
+ 
 #particleCanvas{position:fixed;inset:0;z-index:0;pointer-events:none}
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--void)}
 ::-webkit-scrollbar-thumb{background:linear-gradient(var(--fire),var(--gold));border-radius:2px}
-
+ 
 /* NAV */
 nav{position:fixed;top:20px;left:5%;right:5%;z-index:1000;padding:16px 32px;display:flex;align-items:center;justify-content:space-between;background:rgba(10,8,6,.7);backdrop-filter:blur(24px) saturate(1.5);-webkit-backdrop-filter:blur(24px) saturate(1.5);border:1px solid rgba(255,85,0,.15);border-radius:20px;box-shadow:0 10px 40px rgba(0,0,0,.6);transition:all .4s}
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:4px;color:var(--text);text-decoration:none}
@@ -46,7 +46,7 @@ nav{position:fixed;top:20px;left:5%;right:5%;z-index:1000;padding:16px 32px;disp
 .nav-cta:hover{transform:translateY(-1px);box-shadow:0 0 36px rgba(255,85,0,.5)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:1px;transition:all .3s}
-
+ 
 /* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;padding:160px 60px 80px;position:relative;overflow:hidden;z-index:1}
 .hero-orb-1{position:absolute;top:-200px;right:-200px;width:800px;height:800px;background:radial-gradient(circle,rgba(255,85,0,.12) 0%,rgba(255,85,0,.04) 40%,transparent 70%);pointer-events:none;animation:orbFloat 8s ease-in-out infinite}
@@ -62,14 +62,14 @@ nav{position:fixed;top:20px;left:5%;right:5%;z-index:1000;padding:16px 32px;disp
 .hero-sub{font-size:17px;line-height:1.8;color:var(--text-dim);max-width:500px;margin-bottom:52px;font-weight:400}
 .hero-sub strong{color:var(--text);font-weight:600}
 .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:64px}
-
+ 
 @keyframes heroFadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
 .hero-anim-1{animation:heroFadeUp .7s .1s cubic-bezier(.22,1,.36,1) both}
 .hero-anim-2{animation:heroFadeUp .8s .25s cubic-bezier(.22,1,.36,1) both}
 .hero-anim-3{animation:heroFadeUp .8s .45s cubic-bezier(.22,1,.36,1) both}
 .hero-anim-4{animation:heroFadeUp .8s .6s cubic-bezier(.22,1,.36,1) both}
 .hero-anim-5{animation:heroFadeUp .8s .75s cubic-bezier(.22,1,.36,1) both}
-
+ 
 /* HERO INFOGRAPHIC */
 .hero-infographic{position:absolute;right:60px;top:50%;transform:translateY(-50%);width:380px;z-index:2;animation:heroFadeUp 1s .5s cubic-bezier(.22,1,.36,1) both}
 .inf-panel{background:rgba(14,10,6,.75);backdrop-filter:blur(24px) saturate(1.5);border:1px solid rgba(255,85,0,.2);border-radius:18px;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.7),0 0 60px rgba(255,85,0,.08),inset 0 1px 0 rgba(255,255,255,.06)}
@@ -117,7 +117,7 @@ nav{position:fixed;top:20px;left:5%;right:5%;z-index:1000;padding:16px 32px;disp
 .tag-c{top:20px;right:-50px;animation:tagFloat1 5s 1s ease-in-out infinite}
 @keyframes tagFloat1{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes tagFloat2{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
-
+ 
 /* HERO STATS */
 .hero-stats{display:flex;gap:0;border-top:1px solid rgba(255,255,255,.06);padding-top:48px}
 .stat-item{padding:0 48px 0 0;margin-right:48px;border-right:1px solid rgba(255,255,255,.06)}
@@ -125,14 +125,14 @@ nav{position:fixed;top:20px;left:5%;right:5%;z-index:1000;padding:16px 32px;disp
 .stat-num{font-family:'Bebas Neue',sans-serif;font-size:52px;font-weight:400;background:linear-gradient(135deg,var(--fire),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;letter-spacing:1px}
 .stat-num .unit{font-size:28px;letter-spacing:0}
 .stat-label{font-size:11px;color:var(--text-faint);letter-spacing:2px;margin-top:6px;text-transform:uppercase}
-
+ 
 /* TICKER */
 .ticker-wrapper{overflow:hidden;position:relative;z-index:1;border-top:1px solid rgba(255,85,0,.15);border-bottom:1px solid rgba(255,85,0,.15)}
 .ticker-track{display:flex;width:max-content;animation:ticker 30s linear infinite;padding:14px 0}
 .ticker-item{display:flex;align-items:center;white-space:nowrap;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.7);padding:0 40px}
 .ticker-star{color:var(--fire);font-size:10px;margin:0 24px;text-shadow:0 0 10px var(--orange-glow)}
 @keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-33.333%)}}
-
+ 
 /* BUTTONS */
 .btn-primary{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--fire) 0%,var(--ember) 100%);color:#fff;padding:18px 40px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;border-radius:3px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .3s;box-shadow:0 4px 24px rgba(255,85,0,.4),0 0 60px rgba(255,85,0,.15),inset 0 1px 0 rgba(255,255,255,.2)}
 .btn-primary::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .4s}
@@ -140,7 +140,7 @@ nav{position:fixed;top:20px;left:5%;right:5%;z-index:1000;padding:16px 32px;disp
 .btn-primary:hover::before{left:100%}
 .btn-secondary{display:inline-flex;align-items:center;gap:10px;background:var(--glass);color:var(--text);padding:18px 36px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:1px solid var(--glass-border);cursor:pointer;border-radius:3px;backdrop-filter:blur(12px);transition:border-color .25s,background .25s,transform .2s}
 .btn-secondary:hover{border-color:rgba(255,85,0,.4);background:rgba(255,85,0,.08);transform:translateY(-1px)}
-
+ 
 /* SECTIONS */
 section{padding:120px 60px;position:relative;z-index:1}
 .section-eyebrow{display:inline-flex;align-items:center;gap:14px;font-size:11px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--fire);margin-bottom:24px}
@@ -149,7 +149,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .section-title{font-family:'Syne',sans-serif;font-size:clamp(38px,5.5vw,80px);font-weight:800;line-height:.95;letter-spacing:-1px;margin-bottom:24px}
 .section-title .accent{background:linear-gradient(135deg,var(--fire),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .section-desc{font-size:16px;color:var(--text-dim);line-height:1.8;max-width:520px;margin-bottom:64px}
-
+ 
 /* ABOUT */
 #about{padding:120px 60px;position:relative;z-index:1;overflow:hidden}
 #about::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.25),transparent)}
@@ -183,7 +183,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .about-badge{display:flex;align-items:center;gap:8px;background:rgba(255,85,0,.06);border:1px solid rgba(255,85,0,.15);border-radius:10px;padding:10px 18px;font-size:13px;font-weight:600;color:var(--text-dim);transition:border-color .25s,background .25s}
 .about-badge:hover{border-color:rgba(255,85,0,.35);background:rgba(255,85,0,.1)}
 .about-badge span{font-size:16px}
-
+ 
 /* PAIN */
 #pain{padding:120px 60px;position:relative;z-index:1}
 #pain::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.25),transparent)}
@@ -196,14 +196,14 @@ section{padding:120px 60px;position:relative;z-index:1}
 .pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.06),transparent)}
 .pain-card:hover{transform:translateY(-8px) scale(1.01);border-color:rgba(255,85,0,.3);box-shadow:0 30px 60px rgba(255,85,0,.1),inset 0 0 30px rgba(255,85,0,.04)}
 .pain-card:hover .pain-solution-tag{opacity:1;transform:translateY(0)}
-
+ 
 /* ── PNG ICON AREA ── */
 .pain-icon-wrap{margin-bottom:18px;display:flex;align-items:center}
 /* Замените src на путь к своему PNG. Высота — 56px */
 .pain-icon-img{height:56px;width:auto;filter:drop-shadow(0 0 12px rgba(255,85,0,.35));object-fit:contain}
 /* Fallback emoji если картинки нет */
 .pain-icon-emoji{font-size:40px;filter:drop-shadow(0 0 12px rgba(255,85,0,.3))}
-
+ 
 .pain-problem-label{display:inline-flex;align-items:center;gap:8px;background:rgba(200,30,30,.1);border:1px solid rgba(200,30,30,.2);border-radius:100px;padding:5px 14px;font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#ff6060;margin-bottom:20px}
 .pain-problem-label::before{content:'✕';font-size:9px}
 .pain-headline{font-family:'Syne',sans-serif;font-size:20px;font-weight:800;line-height:1.2;letter-spacing:-.3px;color:var(--text);margin-bottom:12px}
@@ -214,7 +214,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .pain-solution-text{font-size:13px;color:var(--text);line-height:1.7;font-weight:500}
 .pain-solution-text strong{color:var(--ember)}
 .pain-solution-tag{position:absolute;top:20px;right:20px;background:linear-gradient(135deg,var(--fire),var(--ember));color:#fff;font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 12px;border-radius:100px;box-shadow:0 0 16px rgba(255,85,0,.4);opacity:0;transform:translateY(-4px);transition:all .3s}
-
+ 
 /* SERVICES */
 #services{background:transparent}
 #services::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.3),transparent)}
@@ -233,7 +233,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .service-tags{display:flex;flex-wrap:wrap;gap:8px}
 .tag{font-size:10px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--ember);background:rgba(255,85,0,.08);border:1px solid rgba(255,85,0,.15);padding:5px 12px;border-radius:100px;transition:background .2s,border-color .2s}
 .service-card:hover .tag{background:rgba(255,85,0,.14);border-color:rgba(255,85,0,.3)}
-
+ 
 /* PROCESS */
 #process{background:transparent}
 #process::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.2),transparent)}
@@ -250,7 +250,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .process-step:hover .step-inner{background:linear-gradient(135deg,var(--fire),var(--ember));color:#fff;box-shadow:0 0 30px rgba(255,85,0,.5)}
 .step-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;margin-bottom:12px;letter-spacing:-.2px}
 .step-desc{font-size:13px;color:var(--text-dim);line-height:1.75}
-
+ 
 /* PORTFOLIO */
 #portfolio{background:transparent}
 .portfolio-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px}
@@ -264,11 +264,11 @@ section{padding:120px 60px;position:relative;z-index:1}
 .pf-thumb{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#111;display:flex;align-items:center;justify-content:center}
 .pf-card.featured .pf-thumb{aspect-ratio:21/9}
 .pf-thumb-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center}
-
+ 
 /* Встроенное видео */
 .pf-thumb video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.85;transition:opacity .4s}
 .pf-card:hover .pf-thumb video{opacity:1}
-
+ 
 .pf-thumb::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 2px,rgba(0,0,0,.06) 2px,rgba(0,0,0,.06) 4px);pointer-events:none;z-index:2;opacity:.4}
 .pf-thumb::after{content:'';position:absolute;bottom:0;left:0;right:0;height:70%;background:linear-gradient(to top,rgba(0,0,0,.95) 0%,rgba(0,0,0,.4) 50%,transparent 100%);z-index:3}
 .pf-duration{position:absolute;top:14px;right:14px;padding:5px 12px;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:8px;font-size:11px;font-weight:700;color:#fff;letter-spacing:1px;z-index:5}
@@ -290,10 +290,10 @@ section{padding:120px 60px;position:relative;z-index:1}
 .pf-card:hover .pf-tag{border-color:rgba(255,85,0,.2);color:var(--text-dim)}
 .pf-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,var(--fire),transparent);opacity:0;transition:opacity .4s}
 .pf-card:hover::after{opacity:1}
-
+ 
 /* FILE UPLOAD for portfolio */
 .pf-upload-hint{position:absolute;bottom:0;left:0;right:0;padding:8px 14px;background:rgba(255,85,0,.08);border-top:1px dashed rgba(255,85,0,.2);font-size:10px;color:rgba(255,85,0,.5);letter-spacing:1.5px;text-transform:uppercase;text-align:center;z-index:7;pointer-events:none}
-
+ 
 /* PRICING */
 #pricing{background:transparent}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -317,7 +317,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .plan-features li.muted::before{content:'—';color:var(--dust);filter:none}
 .btn-plan{display:block;text-align:center;padding:16px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:12px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,85,0,.3);color:var(--fire);border-radius:10px;transition:all .25s;background:rgba(255,85,0,.05)}
 .btn-plan:hover,.pricing-card.featured .btn-plan{background:linear-gradient(135deg,var(--fire),var(--ember));border-color:transparent;color:#fff;box-shadow:0 4px 20px rgba(255,85,0,.4)}
-
+ 
 /* TESTIMONIALS */
 #testimonials{background:transparent}
 .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -332,7 +332,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .author-avatar{width:48px;height:48px;background:linear-gradient(135deg,rgba(255,85,0,.2),rgba(255,85,0,.05));border:1px solid rgba(255,85,0,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--fire);flex-shrink:0}
 .author-name{font-weight:700;font-size:14px;font-family:'Syne',sans-serif}
 .author-role{font-size:12px;color:var(--text-faint);margin-top:2px}
-
+ 
 /* FAQ */
 #faq{background:transparent}
 .faq-layout{display:grid;grid-template-columns:340px 1fr;gap:80px;align-items:start}
@@ -350,7 +350,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .faq-answer{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.4,0,.2,1)}
 .faq-answer-inner{padding:0 0 20px;font-size:13px;color:var(--text-dim);line-height:1.85}
 .faq-item{border-bottom:1px solid rgba(255,255,255,.06)}
-
+ 
 /* CTA — fixed clipping */
 #cta{background:transparent;text-align:center;padding:140px 60px;position:relative;overflow:visible}
 .cta-orb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(700px,90vw);height:min(700px,90vw);background:radial-gradient(circle,rgba(255,85,0,.12) 0%,rgba(255,85,0,.04) 40%,transparent 70%);pointer-events:none;animation:orbFloat 6s ease-in-out infinite}
@@ -361,7 +361,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .cta-title .accent{background:linear-gradient(135deg,var(--fire),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 40px rgba(255,85,0,.3))}
 .cta-sub{font-size:17px;color:var(--text-dim);max-width:480px;margin:0 auto 52px;line-height:1.8}
 .cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
-
+ 
 /* CONTACT */
 #contact{background:transparent;padding:120px 60px}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
@@ -386,7 +386,7 @@ section{padding:120px 60px;position:relative;z-index:1}
 .form-submit:hover{transform:translateY(-1px);box-shadow:0 8px 40px rgba(255,85,0,.5)}
 .form-submit:hover::before{left:100%}
 .form-status{margin-top:12px;text-align:center;font-size:13px;min-height:20px;transition:all .3s}
-
+ 
 /* FOOTER */
 footer{background:rgba(8,6,4,.95);border-top:1px solid rgba(255,255,255,.05);padding:72px 60px 44px;position:relative;z-index:1}
 footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.3),transparent)}
@@ -404,25 +404,76 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .footer-socials{display:flex;gap:10px}
 .social-link{width:38px;height:38px;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-dim);text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.5px;transition:border-color .2s,color .2s,background .2s,box-shadow .2s}
 .social-link:hover{border-color:rgba(255,85,0,.4);color:var(--fire);background:rgba(255,85,0,.08);box-shadow:0 0 16px rgba(255,85,0,.2)}
-
+ 
 .float-cta{position:fixed;bottom:32px;right:32px;z-index:999;display:flex;flex-direction:column;gap:10px;align-items:flex-end}
 .float-btn{display:flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--fire),var(--ember));color:#fff;padding:14px 22px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border-radius:100px;box-shadow:0 8px 32px rgba(255,85,0,.45);transition:transform .2s,box-shadow .2s}
 .float-btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(255,85,0,.6)}
 .float-tg{background:linear-gradient(135deg,#1a56a0,#2070cc);box-shadow:0 8px 32px rgba(30,100,200,.35)}
 .float-tg:hover{box-shadow:0 12px 40px rgba(30,100,200,.55)}
-
+ 
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
 .hamburger span{display:block;width:24px;height:2px;background:var(--text);border-radius:1px;transition:all .3s}
-
+ 
 .aos{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
 .aos.visible{opacity:1;transform:translateY(0)}
-
+ 
 /* VIDEO MODAL */
 .pf-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);backdrop-filter:blur(20px);z-index:9000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .4s;padding:20px}
 .pf-modal-overlay.open{opacity:1;pointer-events:all}
 .pf-modal-inner{position:relative;width:100%;max-width:960px;background:#0d0a07;border:1px solid rgba(255,85,0,.2);border-radius:20px;overflow:hidden;box-shadow:0 40px 100px rgba(0,0,0,.9),0 0 60px rgba(255,85,0,.1);transform:scale(.92);transition:transform .4s cubic-bezier(.22,1,.36,1)}
 .pf-modal-overlay.open .pf-modal-inner{transform:scale(1)}
-
+ 
+/* DRIVE BUTTON */
+.btn-drive{display:inline-flex;align-items:center;gap:8px;background:rgba(255,85,0,.07);color:var(--ember);padding:14px 28px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;border:1px solid rgba(255,85,0,.3);border-radius:10px;backdrop-filter:blur(12px);transition:all .25s;white-space:nowrap}
+.btn-drive:hover{background:rgba(255,85,0,.14);border-color:rgba(255,85,0,.6);box-shadow:0 0 24px rgba(255,85,0,.25);transform:translateY(-1px)}
+ 
+/* PAIN ICON GLOW */
+.pain-icon-wrap{margin-bottom:18px;display:flex;align-items:center;justify-content:flex-start}
+.pain-icon-wrap img{filter:drop-shadow(0 0 14px rgba(255,85,0,.6)) drop-shadow(0 0 28px rgba(255,85,0,.25));transition:filter .4s,transform .4s}
+.pain-card:hover .pain-icon-wrap img{filter:drop-shadow(0 0 22px rgba(255,85,0,.9)) drop-shadow(0 0 44px rgba(255,170,68,.45));transform:scale(1.08) translateY(-3px)}
+ 
+/* ═══ TRUST SECTION ═══ */
+#trust{padding:120px 60px;position:relative;z-index:1;overflow:hidden}
+#trust::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.3),transparent)}
+#trust::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.15),transparent)}
+.trust-intro{text-align:center;margin-bottom:72px}
+.trust-subtitle{font-size:16px;color:var(--text-dim);max-width:560px;margin:16px auto 0;line-height:1.8}
+.trust-counter-row{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;margin-bottom:72px}
+.trust-counter-item{text-align:center}
+.trust-counter-num{font-family:'Bebas Neue',sans-serif;font-size:64px;background:linear-gradient(135deg,var(--fire),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;filter:drop-shadow(0 0 20px rgba(255,85,0,.3))}
+.trust-counter-label{font-size:11px;color:var(--text-faint);letter-spacing:3px;text-transform:uppercase;margin-top:6px}
+.trust-arena{position:relative;height:400px;max-width:840px;margin:0 auto}
+.trust-arena-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:520px;height:520px;background:radial-gradient(circle,rgba(255,85,0,.09) 0%,rgba(255,85,0,.03) 45%,transparent 70%);pointer-events:none;border-radius:50%;animation:arenaPulse 5s ease-in-out infinite}
+@keyframes arenaPulse{0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.06)}}
+.trust-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:1px solid rgba(255,85,0,.1);border-radius:50%;pointer-events:none}
+.trust-ring-1{width:240px;height:240px;animation:spinRing 22s linear infinite}
+.trust-ring-2{width:400px;height:400px;animation:spinRing 36s linear infinite reverse;border-color:rgba(255,85,0,.06)}
+.trust-ring-3{width:560px;height:560px;animation:spinRing 52s linear infinite;border-style:dashed;border-color:rgba(255,85,0,.04)}
+@keyframes spinRing{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
+@keyframes floatLogo{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.03)}}
+.trust-logo-item{will-change:transform}
+.trust-logo{width:88px;height:88px;background:linear-gradient(135deg,rgba(24,18,12,.9),rgba(10,8,6,.95));border:1px solid rgba(255,255,255,.08);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;backdrop-filter:blur(20px);box-shadow:0 10px 40px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.06);transition:transform .45s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s;cursor:default;position:relative;overflow:hidden}
+.trust-logo::before{content:'';position:absolute;top:-40%;left:-40%;width:180%;height:180%;background:radial-gradient(circle at 50% 0%,rgba(255,85,0,.2),transparent 60%);opacity:0;transition:opacity .4s}
+.trust-logo:hover{border-color:rgba(255,85,0,.5);box-shadow:0 20px 60px rgba(0,0,0,.8),0 0 30px rgba(255,85,0,.2),inset 0 1px 0 rgba(255,255,255,.1)}
+.trust-logo:hover::before{opacity:1}
+.trust-logo img{width:44px;height:44px;object-fit:contain;filter:brightness(.75) saturate(.5);transition:filter .4s,transform .4s}
+.trust-logo:hover img{filter:brightness(1.1) saturate(1.2) drop-shadow(0 0 6px rgba(255,85,0,.5));transform:scale(1.1)}
+.trust-logo-text{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.4);text-align:center;line-height:1.2;transition:color .3s;padding:0 6px}
+.trust-logo:hover .trust-logo-text{color:var(--fire)}
+.trust-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:10;pointer-events:none}
+.trust-center-badge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:112px;height:112px;background:linear-gradient(135deg,rgba(255,85,0,.12),rgba(255,85,0,.04));border:2px solid rgba(255,85,0,.4);border-radius:50%;box-shadow:0 0 50px rgba(255,85,0,.18),0 0 90px rgba(255,85,0,.07),inset 0 0 25px rgba(255,85,0,.04);animation:centerPulse 3s ease-in-out infinite}
+@keyframes centerPulse{0%,100%{box-shadow:0 0 40px rgba(255,85,0,.15),0 0 80px rgba(255,85,0,.05)}50%{box-shadow:0 0 70px rgba(255,85,0,.3),0 0 110px rgba(255,85,0,.1)}}
+.trust-center-icon{font-size:34px;line-height:1}
+.trust-center-label{font-family:'Bebas Neue',sans-serif;font-size:10px;color:var(--fire);letter-spacing:3px;margin-top:4px}
+.trust-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
+.trust-quote{background:linear-gradient(135deg,rgba(20,15,10,.6),rgba(10,8,6,.85));border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:28px 28px 24px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
+.trust-quote::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent)}
+.trust-quote:hover{border-color:rgba(255,85,0,.2);transform:translateY(-4px)}
+.trust-mark{position:absolute;top:14px;right:18px;font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:rgba(255,85,0,.08);line-height:1;pointer-events:none}
+.trust-quote-text{font-size:14px;color:var(--text-dim);line-height:1.75;font-style:italic;margin-bottom:16px}
+.trust-quote-author{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--fire);letter-spacing:1px}
+.trust-quote-role{font-size:11px;color:var(--text-faint);margin-top:2px}
+ 
 /* ══ RESPONSIVE ══ */
 @media(max-width:1100px){
   nav{top:10px;left:3%;right:3%;padding:14px 20px}
@@ -448,6 +499,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   .pf-card.featured .pf-thumb{aspect-ratio:16/9}
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
+  #trust{padding:80px 24px}
+  .trust-arena{height:320px}
+  .trust-ring-3{width:400px;height:400px}
+  .trust-ring-2{width:290px;height:290px}
+  .trust-ring-1{width:170px;height:170px}
+  .trust-quotes{grid-template-columns:1fr}
+  .trust-counter-row{gap:32px}
+  .portfolio-header{flex-direction:column;align-items:flex-start;gap:16px}
 }
 @media(max-width:768px){
   .pain-grid{grid-template-columns:1fr}
@@ -484,18 +543,18 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 </style>
 </head>
 <body>
-
+ 
 <div class="cursor" id="cursor"></div>
 <div class="cursor-ring" id="cursorRing"></div>
 <canvas id="particleCanvas"></canvas>
-
+ 
 <!-- NAV -->
 <nav id="navbar">
   <a href="#hero" class="nav-logo">BABAN<em>_OFF</em></a>
   <ul class="nav-links">
     <li><a href="#about">Обо мне</a></li>
     <li><a href="#services">Услуги</a></li>
-    <li><a href="#pain">Боли</a></li>
+    <li><a href="#trust">Клиенты</a></li>
     <li><a href="#portfolio">Работы</a></li>
     <li><a href="#pricing">Цены</a></li>
     <li><a href="#faq">FAQ</a></li>
@@ -506,7 +565,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <span></span><span></span><span></span>
   </div>
 </nav>
-
+ 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-orb-1"></div>
@@ -546,7 +605,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       </div>
     </div>
   </div>
-
+ 
   <!-- EDITOR INFOGRAPHIC (desktop only) -->
   <div class="hero-infographic" id="heroInfographic">
     <div class="inf-panel">
@@ -608,7 +667,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="inf-float-tag tag-c">DaVinci Resolve</div>
   </div>
 </section>
-
+ 
 <!-- TICKER -->
 <div class="ticker-wrapper">
   <div class="ticker-track">
@@ -617,7 +676,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="ticker-item"> VIDEO EDITOR <span class="ticker-star">✦</span> REELS &amp; SHORTS <span class="ticker-star">✦</span> MOTION DESIGN <span class="ticker-star">✦</span> COLOR GRADING <span class="ticker-star">✦</span> REAL ESTATE <span class="ticker-star">✦</span> COMMERCIAL PROD <span class="ticker-star">✦</span> VFX &amp; SFX <span class="ticker-star">✦</span> LUXURY VISUAL <span class="ticker-star">✦</span></div>
   </div>
 </div>
-
+ 
 <!-- ABOUT -->
 <section id="about">
   <div class="about-grid">
@@ -650,7 +709,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
   </div>
 </section>
-
+ 
 <!-- PAIN POINTS -->
 <section id="pain">
   <div class="pain-bg-glow"></div>
@@ -660,7 +719,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <p class="section-desc">Я знаю, что вас беспокоит при поиске монтажёра. Поэтому решил эти проблемы ещё до того, как вы спросили.</p>
   </div>
   <div class="pain-grid">
-
+ 
     <div class="pain-card aos">
       <div class="pain-solution-tag">✓ РЕШЕНО</div>
       <div class="pain-problem-label">Частая боль #1</div>
@@ -680,7 +739,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="pain-divider"></div>
       <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Отвечаю на запросы <strong>в течение 2 часов</strong> в рабочее время. После получения материала приступаю к работе и даю точный срок.</div></div>
     </div>
-
+ 
     <div class="pain-card aos">
       <div class="pain-solution-tag">✓ РЕШЕНО</div>
       <div class="pain-problem-label">Частая боль #2</div>
@@ -693,7 +752,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="pain-divider"></div>
       <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Сроки обсуждаются заранее. <strong>За 3+ года — ни одного срыва.</strong> Если форс-мажор — предупреждаю заранее, а не после дедлайна.</div></div>
     </div>
-
+ 
     <div class="pain-card aos">
       <div class="pain-solution-tag">✓ РЕШЕНО</div>
       <div class="pain-problem-label">Частая боль #3</div>
@@ -706,7 +765,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="pain-divider"></div>
       <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Работаю <strong>по графику с чёткими условиями</strong>. Правки в пределах тарифа — без доплат. Предоплата только 50%.</div></div>
     </div>
-
+ 
     <div class="pain-card aos">
       <div class="pain-solution-tag">✓ РЕШЕНО</div>
       <div class="pain-problem-label">Частая боль #4</div>
@@ -719,7 +778,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="pain-divider"></div>
       <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Мы не копируем конкурентов. Мы анализируем их слабые места и делаем продукт, который <strong>задает тренды</strong>, а не следует им.</div></div>
     </div>
-
+ 
     <div class="pain-card aos">
       <div class="pain-solution-tag">✓ РЕШЕНО</div>
       <div class="pain-problem-label">Частая боль #5</div>
@@ -732,7 +791,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="pain-divider"></div>
       <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Структурированный бриф за <strong>15 минут</strong>. Высокий уровень контента, который не нужно контролировать на каждом шагу — вы просто скидываете материал и ждёте готовый результат.</div></div>
     </div>
-
+ 
     <div class="pain-card aos">
       <div class="pain-solution-tag">✓ РЕШЕНО</div>
       <div class="pain-problem-label">Частая боль #6</div>
@@ -745,10 +804,10 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="pain-divider"></div>
       <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Твои ролики будут <strong>выглядеть дорого и выделяться</strong>, сохраняя единый стиль. Минимум вводных — максимум попадания в задачу. Я сам знаю, как сделать «премиально». Один раз настроили работу — и контент идёт без остановок.</div></div>
     </div>
-
+ 
   </div>
 </section>
-
+ 
 <!-- SERVICES -->
 <section id="services">
   <div class="section-eyebrow">Что я делаю</div>
@@ -763,7 +822,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="service-card aos"><span class="service-num">06</span><div class="service-icon-wrap"><img src="calendar.png" style="width: 47px; height: 47px; object-fit: contain;"></div><div class="service-title">Постоянное Партнерство</div><p class="service-desc">Приоритетное обслуживание, ежемесячное ведение контента и сохранение единого визуального стиля бренда.</p><div class="service-tags"><span class="tag">Ежемесячно</span><span class="tag">Пакет</span><span class="tag">Приоритет</span></div></div>
   </div>
 </section>
-
+ 
 <!-- PROCESS -->
 <section id="process">
   <div class="section-eyebrow">Как это работает</div>
@@ -777,303 +836,453 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">04</div></div><div class="step-title">Финальная сдача</div><p class="step-desc">Готовое видео в нужных форматах. Вы публикуете — и получаете результат. Всё чисто.</p></div>
   </div>
 </section>
-
+ 
 <!-- PORTFOLIO -->
-
+ 
 <section id="portfolio">
-
+ 
   <div class="portfolio-header">
-
+ 
     <div>
-
+ 
       <div class="section-eyebrow">Примеры работ</div>
-
+ 
       <h2 class="section-title">МОИ <span class="accent">ПРОЕКТЫ</span></h2>
-
+ 
     </div>
-
-    <a href="#contact" class="btn-secondary">Заказать похожее →</a>
-
+ 
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center">
+      <!-- 🔗 Замените href на вашу ссылку Google Диска / Яндекс.Диска -->
+      <a href="https://drive.google.com/ВАШ_ДИСК" target="_blank" class="btn-drive">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" style="flex-shrink:0"><path d="M12 2L2 19.5h20L12 2z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 19.5L8.5 9m7 0L22 19.5M8.5 9h7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Все работы на Диске →
+      </a>
+      <a href="#contact" class="btn-secondary">Заказать похожее →</a>
+    </div>
+ 
   </div>
-
+ 
   <div class="portfolio-filters">
-
+ 
     <button class="pf-tab active" onclick="filterPortfolio('all',this)">Все работы</button>
-
+ 
     <button class="pf-tab" onclick="filterPortfolio('reels',this)">Reels</button>
-
+ 
     <button class="pf-tab" onclick="filterPortfolio('logo',this)">logo</button>
-
+ 
     <button class="pf-tab" onclick="filterPortfolio('motion',this)">motion</button>
-
+ 
     <button class="pf-tab" onclick="filterPortfolio('promo',this)">promo</button>
-
+ 
   </div>
-
+ 
   <div class="portfolio-grid" id="portfolioGrid">
-
-
-
+ 
+ 
+ 
     <!-- ═══════════════════════════════════════════════════════════
-
+ 
          📹 КАК ДОБАВИТЬ СВОЁ ВИДЕО:
-
+ 
          1. Положите файл (mp4/webm) в папку сайта
-
+ 
          2. Замените src="your-video-1.mp4" на путь к вашему видео
-
+ 
          3. poster="your-cover-1.jpg" — обложка до воспроизведения
-
+ 
          4. Можно добавить/убрать autoplay muted loop playsinline
-
+ 
          ═══════════════════════════════════════════════════════════ -->
-
-
-
+ 
+ 
+ 
     <div class="pf-card featured aos" data-category="logo">
-
+ 
       <div class="pf-thumb">
-
+ 
         <!--
-
+ 
           Вариант A — прямо встроенное видео (mp4):
-
+ 
           Замените src на ваш файл. poster — обложка.
-
+ 
         -->
-
+ 
         <video
-
+ 
           src="logoanimationmp.mp4"
-
+ 
           poster="logo1.png"
-
+ 
           muted loop playsinline preload="metadata"
-
+ 
           onmouseenter="this.play()"
-
+ 
           onmouseleave="this.pause();this.currentTime=0"
-
+ 
         ></video>
-
+ 
         <!--
-
+ 
           Вариант B — обложка + открыть полное видео по клику:
-
+ 
           Раскомментируйте img ниже и удалите video выше.
-
+ 
           <img src="kubok.png" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
-
+ 
         -->
-
+ 
         <div class="pf-shimmer"></div>
-
+ 
         <div class="pf-cat">Logo Animation</div>
-
+ 
         <div class="pf-duration">0:02</div>
-
+ 
         <div class="pf-play" onclick="openVideoFile('logoanimationmp.mp4','logo1.png',this)"></div>
-
+ 
       </div>
-
+ 
       <div class="pf-info">
-
+ 
         <div class="pf-num">ПРОЕКТ 01</div>
-
+ 
         <div class="pf-project-title">Отраслевой Стандарт.</div>
-
+ 
         <div class="pf-project-desc">Демонстрация возможностей motion design для ниши Архитектуры. Авторский подход к современной "вау" анимации.</div>
-
+ 
         <div class="pf-tags"><span class="pf-tag">Logo</span><span class="pf-tag">After Effects</span><span class="pf-tag">Motion Design</span></div>
-
+ 
       </div>
-
+ 
     </div>
-
-
-
+ 
+ 
+ 
     <div class="pf-card aos" data-category="reels">
-
+ 
       <div class="pf-thumb">
-
+ 
         <!-- 📹 Замените src на свой файл -->
-
+ 
         <video src="defianim.mp4" poster="defianimnew.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-
+ 
         <div class="pf-thumb-bg" style="opacity:.5"><svg width="60" height="100" viewBox="0 0 60 100"><rect x="5" y="5" width="50" height="90" rx="4" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="20,37 20,63 44,50" fill="#FF5500"/></svg></div>
-
+ 
         <div class="pf-shimmer"></div>
-
+ 
         <div class="pf-cat">Reels</div>
-
+ 
         <div class="pf-duration">0:17</div>
-
+ 
         <div class="pf-play" onclick="openVideoFile('defianim.mp4','defianimnew.png',this)"></div>
-
+ 
       </div>
-
+ 
       <div class="pf-info">
-
+ 
         <div class="pf-num">ПРОЕКТ 02</div>
-
+ 
         <div class="pf-project-title">Reels для Флагманского Криптотерминала.</div>
-
+ 
         <div class="pf-project-desc">Концепция: Визуализация универсальности продукта через ритмическую смену окружения.
-
+ 
 Результат: Создан премиальный темпо-ритм, который удерживает внимание на продукте, наглядно демонстрируя его адаптивность под любой вид ритейла.</div>
-
+ 
         <div class="pf-tags"><span class="pf-tag">Reels</span><span class="pf-tag">Dubai Business</span></div>
-
+ 
       </div>
-
+ 
     </div>
-
-
-
+ 
+ 
+ 
     <div class="pf-card aos" data-category="promo">
-
+ 
       <div class="pf-thumb">
-
+ 
         <video src="Introduction.mp4" poster="Introduction.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-
+ 
         <div class="pf-thumb-bg" style="opacity:.5"><svg width="80" height="60" viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" rx="3" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="28,18 28,42 52,30" fill="#FF5500"/></svg></div>
-
+ 
         <div class="pf-shimmer"></div>
-
-        <div class="pf-cat">Motion</div>
-
-        <div class="pf-duration">0:10</div>
-
-        <div class="pf-play" onclick="openVideoFile('Introduction.mp4','Introduction.png',this)"></div>
-
-      </div>
-
-      <div class="pf-info">
-
-        <div class="pf-num">ПРОЕКТ 03</div>
-
-        <div class="pf-project-title">Концептуальное промо «Архитектура монтажа».</div>
-
-        <div class="pf-project-desc">Концепция: Погружение зрителя в 3D-пространство через механику взаимодействия.
-
-Результат: Ролик наглядно транслирует философию бренда: монтаж — это не склейка, а путь, по которому мы ведем зрителя к целевому действию.</div>
-
-        <div class="pf-tags"><span class="pf-tag">After Effects</span><span class="pf-tag">Motion</span></div>
-
-      </div>
-
-    </div>
-
-
-
-    <div class="pf-card aos" data-category="motion">
-
-      <div class="pf-thumb">
-
-        <video src="defibest.mp4" poster="defibest.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-
-        <div class="pf-thumb-bg" style="opacity:.5"><svg width="80" height="60" viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" rx="3" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="28,18 28,42 52,30" fill="#FF5500"/></svg></div>
-
-        <div class="pf-shimmer"></div>
-
+ 
         <div class="pf-cat">Промо</div>
-
-        <div class="pf-duration">0:09</div>
-
-        <div class="pf-play" onclick="openVideoFile('defibest.mp4','defibest.png',this)"></div>
-
+ 
+        <div class="pf-duration">0:10</div>
+ 
+        <div class="pf-play" onclick="openVideoFile('Introduction.mp4','Introduction.png',this)"></div>
+ 
       </div>
-
+ 
       <div class="pf-info">
-
-        <div class="pf-num">ПРОЕКТ 04</div>
-
-        <div class="pf-project-title">Информационный блок по теме Безопасности Крипто-Активов.</div>
-
-        <div class="pf-project-desc">Концепция: Разработка уникальной айдентики новостного блока. Использование сложной анимации пролетов для создания ощущения масштаба и экспертности.
-
-Результат: Визуал упаковывает сложную финансовую тему в формат «Новостного ТВ», вызывая мгновенное доверие к контенту и бренду.</div>
-
-        <div class="pf-tags"><span class="pf-tag">Crypto</span><span class="pf-tag">Business</span></div>
-
+ 
+        <div class="pf-num">ПРОЕКТ 03</div>
+ 
+        <div class="pf-project-title">Концептуальное промо «Архитектура монтажа».</div>
+ 
+        <div class="pf-project-desc">Концепция: Погружение зрителя в 3D-пространство через механику взаимодействия.
+ 
+Результат: Ролик наглядно транслирует философию бренда: монтаж — это не склейка, а путь, по которому мы ведем зрителя к целевому действию.</div>
+ 
+        <div class="pf-tags"><span class="pf-tag">After Effects</span><span class="pf-tag">Motion</span></div>
+ 
       </div>
-
+ 
     </div>
-
-
-
-    <div class="pf-card aos" data-category="reels">
-
+ 
+ 
+ 
+    <div class="pf-card aos" data-category="motion">
+ 
       <div class="pf-thumb">
-
-        <video src="vistavka.mp4" poster="vistavka.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
-
-        <div class="pf-thumb-bg" style="opacity:.5"><svg width="60" height="100" viewBox="0 0 60 100"><rect x="5" y="5" width="50" height="90" rx="4" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="20,37 20,63 44,50" fill="#FF5500"/></svg></div>
-
+ 
+        <video src="defibest.mp4" poster="defibest.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
+ 
+        <div class="pf-thumb-bg" style="opacity:.5"><svg width="80" height="60" viewBox="0 0 80 60"><rect x="5" y="5" width="70" height="50" rx="3" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="28,18 28,42 52,30" fill="#FF5500"/></svg></div>
+ 
         <div class="pf-shimmer"></div>
-
-        <div class="pf-cat">Shorts</div>
-
+ 
+        <div class="pf-cat">Motion</div>
+ 
         <div class="pf-duration">0:09</div>
-
-        <div class="pf-play" onclick="openVideoFile('vistavka.mp4','vistavka.png',this)"></div>
-
+ 
+        <div class="pf-play" onclick="openVideoFile('defibest.mp4','defibest.png',this)"></div>
+ 
       </div>
-
+ 
       <div class="pf-info">
-
+ 
+        <div class="pf-num">ПРОЕКТ 04</div>
+ 
+        <div class="pf-project-title">Информационный блок по теме Безопасности Крипто-Активов.</div>
+ 
+        <div class="pf-project-desc">Концепция: Разработка уникальной айдентики новостного блока. Использование сложной анимации пролетов для создания ощущения масштаба и экспертности.
+ 
+Результат: Визуал упаковывает сложную финансовую тему в формат «Новостного ТВ», вызывая мгновенное доверие к контенту и бренду.</div>
+ 
+        <div class="pf-tags"><span class="pf-tag">Crypto</span><span class="pf-tag">Business</span></div>
+ 
+      </div>
+ 
+    </div>
+ 
+ 
+ 
+    <div class="pf-card aos" data-category="reels">
+ 
+      <div class="pf-thumb">
+ 
+        <video src="vistavka.mp4" poster="vistavka.png" muted loop playsinline preload="metadata" onmouseenter="this.play()" onmouseleave="this.pause();this.currentTime=0"></video>
+ 
+        <div class="pf-thumb-bg" style="opacity:.5"><svg width="60" height="100" viewBox="0 0 60 100"><rect x="5" y="5" width="50" height="90" rx="4" fill="none" stroke="#FF5500" stroke-width="1.5"/><polygon points="20,37 20,63 44,50" fill="#FF5500"/></svg></div>
+ 
+        <div class="pf-shimmer"></div>
+ 
+        <div class="pf-cat">Shorts</div>
+ 
+        <div class="pf-duration">0:09</div>
+ 
+        <div class="pf-play" onclick="openVideoFile('vistavka.mp4','vistavka.png',this)"></div>
+ 
+      </div>
+ 
+      <div class="pf-info">
+ 
         <div class="pf-num">ПРОЕКТ 05</div>
-
+ 
         <div class="pf-project-title">Масштабный кейс для выставки в Красноярском крае.</div>
-
+ 
         <div class="pf-project-desc">Концепция: Создание многослойных сцен (Scene Building) с интеграцией 3D-моделей флота. Особый акцент на иммерсивный саунд-дизайн (SFX), заменяющий голос диктора и создающий эффект присутствия.
-
+ 
 ​Результат: Ролик-путешествие, который превращает производственный отчет в эпическое кино. Идеальный пример работы с большими форматами без потери динамики.</div>
-
+ 
         <div class="pf-tags"><span class="pf-tag">Выставка</span><span class="pf-tag">3D</span></div>
-
+ 
       </div>
-
+ 
     </div>
-
-
-
+ 
+ 
+ 
   </div>
-
+ 
 </section>
-
-
-
+ 
+ 
+ 
 <!-- VIDEO MODAL (для локальных файлов) -->
-
+ 
 <div class="pf-modal-overlay" id="videoModal" onclick="closeVideo(event)">
-
+ 
   <div class="pf-modal-inner">
-
+ 
     <div style="position:relative;width:100%;aspect-ratio:16/9;background:#000">
-
+ 
       <video id="modalVideo" style="width:100%;height:100%;display:block" controls></video>
-
+ 
     </div>
-
+ 
     <div style="padding:16px 24px;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
-
+ 
       <div>
-
+ 
         <div id="modalTitle" style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:#fff"></div>
-
+ 
         <div id="modalSub" style="color:var(--text-dim);font-size:.8rem;margin-top:4px"></div>
-
+ 
       </div>
-
+ 
       <button onclick="closeVideoBtn()" style="background:rgba(255,85,0,.1);border:1px solid rgba(255,85,0,.3);color:var(--fire);padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:600;font-size:11px;letter-spacing:1px;text-transform:uppercase">Закрыть ✕</button>
-
+ 
     </div>
-
+ 
   </div>
-
+ 
 </div>
-
+ 
+<!-- TRUST / CLIENTS -->
+<section id="trust">
+  <div class="trust-intro aos">
+    <div class="section-eyebrow">Доверие клиентов</div>
+    <h2 class="section-title">НАМ <span class="accent">ДОВЕРЯЮТ</span><br>ЛИДЕРЫ РЫНКА</h2>
+    <p class="trust-subtitle">Работаю с брендами и проектами, которые ценят визуальное качество выше средних стандартов. Список постоянно растёт.</p>
+  </div>
+ 
+  <div class="trust-counter-row aos">
+    <div class="trust-counter-item">
+      <div class="trust-counter-num">1200<span style="font-size:36px">+</span></div>
+      <div class="trust-counter-label">Проектов выполнено</div>
+    </div>
+    <div class="trust-counter-item">
+      <div class="trust-counter-num">47<span style="font-size:36px">+</span></div>
+      <div class="trust-counter-label">Постоянных клиентов</div>
+    </div>
+    <div class="trust-counter-item">
+      <div class="trust-counter-num">12<span style="font-size:36px">+</span></div>
+      <div class="trust-counter-label">Стран сотрудничества</div>
+    </div>
+    <div class="trust-counter-item">
+      <div class="trust-counter-num">3<span style="font-size:36px">г.</span></div>
+      <div class="trust-counter-label">В индустрии</div>
+    </div>
+  </div>
+ 
+  <!-- Floating logos arena -->
+  <div class="trust-arena" id="trustArena">
+    <div class="trust-arena-bg"></div>
+    <div class="trust-ring trust-ring-1"></div>
+    <div class="trust-ring trust-ring-2"></div>
+    <div class="trust-ring trust-ring-3"></div>
+ 
+    <!-- Centre badge -->
+    <div class="trust-center">
+      <div class="trust-center-badge">
+        <span class="trust-center-icon">🎬</span>
+        <span class="trust-center-label">BABAN_OFF</span>
+      </div>
+    </div>
+ 
+    <!--
+      ════════════════════════════════════════════════════════
+      🖼️ КАК ЗАМЕНИТЬ ЛОГОТИПЫ:
+      1. Сохраните PNG логотипа в папку сайта (лучше 100×100px,
+         на прозрачном фоне)
+      2. Замените src="logos/logo-X.png" на ваш путь
+      3. Замените текст внутри trust-logo-text на название
+         компании
+      4. Логотипы расставляются JavaScript-ом по кругу
+         автоматически — просто добавляйте .trust-logo-item
+      ════════════════════════════════════════════════════════
+    -->
+ 
+    <div class="trust-logo-item" data-orbit="1">
+      <div class="trust-logo">
+        <!-- <img src="logos/client-1.png" alt=""> -->
+        <span style="font-size:26px">🏢</span>
+        <div class="trust-logo-text">DEFI<br>TERMINAL</div>
+      </div>
+    </div>
+ 
+    <div class="trust-logo-item" data-orbit="2">
+      <div class="trust-logo">
+        <!-- <img src="logos/client-2.png" alt=""> -->
+        <span style="font-size:26px">🏗️</span>
+        <div class="trust-logo-text">ARCH<br>STUDIO</div>
+      </div>
+    </div>
+ 
+    <div class="trust-logo-item" data-orbit="3">
+      <div class="trust-logo">
+        <!-- <img src="logos/client-3.png" alt=""> -->
+        <span style="font-size:26px">⛵</span>
+        <div class="trust-logo-text">YACHT<br>MEDIA</div>
+      </div>
+    </div>
+ 
+    <div class="trust-logo-item" data-orbit="4">
+      <div class="trust-logo">
+        <!-- <img src="logos/client-4.png" alt=""> -->
+        <span style="font-size:26px">🔐</span>
+        <div class="trust-logo-text">CRYPTO<br>NEWS</div>
+      </div>
+    </div>
+ 
+    <div class="trust-logo-item" data-orbit="5">
+      <div class="trust-logo">
+        <!-- <img src="logos/client-5.png" alt=""> -->
+        <span style="font-size:26px">📱</span>
+        <div class="trust-logo-text">SMM<br>AGENCY</div>
+      </div>
+    </div>
+ 
+    <div class="trust-logo-item" data-orbit="6">
+      <div class="trust-logo">
+        <!-- <img src="logos/client-6.png" alt=""> -->
+        <span style="font-size:26px">🎯</span>
+        <div class="trust-logo-text">TARGET<br>PRO</div>
+      </div>
+    </div>
+ 
+    <div class="trust-logo-item" data-orbit="7">
+      <div class="trust-logo">
+        <!-- <img src="logos/client-7.png" alt=""> -->
+        <span style="font-size:26px">🏆</span>
+        <div class="trust-logo-text">EXHIBI<br>TION</div>
+      </div>
+    </div>
+ 
+    <div class="trust-logo-item" data-orbit="8">
+      <div class="trust-logo">
+        <!-- <img src="logos/client-8.png" alt=""> -->
+        <span style="font-size:26px">✨</span>
+        <div class="trust-logo-text">MOTION<br>BRAND</div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Trust quotes -->
+  <div class="trust-quotes">
+    <div class="trust-quote aos">
+      <div class="trust-mark">"</div>
+      <div class="trust-quote-text">Работали над запуском DeFi-продукта. Итоговый визуал вышел на уровне мировых финтех-брендов — такого от фриланса не ожидали.</div>
+      <div class="trust-quote-author">DeFi Terminal</div>
+      <div class="trust-quote-role">Криптовалютная платформа, Dubai</div>
+    </div>
+    <div class="trust-quote aos">
+      <div class="trust-mark">"</div>
+      <div class="trust-quote-text">Три месяца ведения контента — охваты выросли в 4 раза. BABAN_OFF понимает, как должна работать картинка в недвижимости.</div>
+      <div class="trust-quote-author">Arch Studio</div>
+      <div class="trust-quote-role">Архитектурное бюро</div>
+    </div>
+    <div class="trust-quote aos">
+      <div class="trust-mark">"</div>
+      <div class="trust-quote-text">Выставочный ролик с 3D-интеграцией получил отдельную статью в отраслевом журнале. Клиент остался в полном восторге.</div>
+      <div class="trust-quote-author">Exhibition Case</div>
+      <div class="trust-quote-role">Красноярский край, промышленная выставка</div>
+    </div>
+  </div>
+</section>
+ 
 <!-- PRICING -->
 <section id="pricing">
   <div class="section-eyebrow">Тарифы</div>
@@ -1110,7 +1319,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
   </div>
 </section>
-
+ 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="section-eyebrow">Отзывы</div>
@@ -1127,93 +1336,93 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 </div><div><div class="author-name">Евгений Р.</div><div class="author-role">Продвижение, e-commerce</div></div></div></div>
   </div>
 </section>
-
+ 
 <!-- FAQ -->
-
+ 
 <section id="faq">
-
+ 
   <section id="faq" style="padding: 100px 0;">
-
+ 
   <div class="faq-layout" style="display: flex; flex-wrap: wrap; gap: 60px; align-items: flex-start;">
-
+ 
     
-
+ 
     <div class="faq-left" style="flex: 1; min-width: 300px; max-width: 450px;">
-
+ 
       <div class="section-eyebrow">Частые вопросы</div>
-
+ 
       <h3 class="section-title" style="margin-bottom: 25px; line-height: 1.1;">
   ЕСТЬ <span class="accent" style="font-size: 0.9em; vertical-align: middle;">ВОПРОСЫ?</span>
 </h3>
       <p class="section-desc" style="margin-bottom: 40px;">
-
+ 
         Нет глупых вопросов. 
         Есть только хорошее видео.
-
+ 
       </p>
-
+ 
       
-
+ 
       <div class="faq-visual-box">
-
+ 
         <div class="faq-visual-orb"></div>
-
+ 
         <div class="faq-glyph" style="display: flex; justify-content: center; height: 250px;">
-
+ 
            <img src="lampochka.png" style="max-height: 100%; object-fit: contain;">
-
+ 
         </div>
-
+ 
       </div>
-
+ 
     </div>
-
-
-
+ 
+ 
+ 
     <div class="faq-list" style="flex: 1.5; min-width: 320px;">
-
+ 
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Как передать исходные материалы?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Работаю с любым облачным хранилищем: Google Drive, Яндекс Диск, Dropbox, WeTransfer. После оформления заказа отправлю ссылку на папку. Обычно 10–15 минут для передачи материалов.</div></div></div>
-
-
-
+ 
+ 
+ 
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Сколько времени занимает монтаж?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Ролик до 5 минут — 2–3 рабочих дня. Длинные форматы до 20 минут — 4–6 дней. Срочные заказы — за доп. оплату (24 часа). Точные сроки обговариваются на брифинге.</div></div></div>
-
-
-
+ 
+ 
+ 
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Что входит в «правки»?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Корректировка темпа, порядка сцен, замена музыки, изменение текста титров, цветокоррекция. Не входит: полный перемонтаж с нуля или замена концепции после утверждения структуры.</div></div></div>
-
-
-
+ 
+ 
+ 
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">В каких форматах сдаёте финальный файл?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">MP4 (H.264/H.265) в нужном разрешении: 1080p, 4K, вертикальный 9:16, квадратный 1:1. По запросу — ProRes. Всё оптимизировано под платформу публикации.</div></div></div>
-
-
-
+ 
+ 
+ 
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Нужен ли мне сценарий заранее?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Нет. Если есть только сырые съёмки — я сам выстрою структуру и нарратив. Главное — понять вашу цель и аудиторию, остальное беру на себя.</div></div></div>
-
-
-
+ 
+ 
+ 
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Как происходит оплата?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Предоплата 50% перед стартом, остаток — после принятия финальной версии. Принимаю переводы на карту (Сбербанк, Тинькофф), по счёту для юрлиц. Работаю по договору.</div></div></div>
-
-
-
+ 
+ 
+ 
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Можно ли начать с одного ролика?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Да, конечно. Многие начинают с тестового заказа по тарифу «Старт». Никаких долгосрочных обязательств не требую.</div></div></div>
-
-
-
+ 
+ 
+ 
       <div class="faq-item"><button class="faq-question" onclick="toggleFaq(this)">Работаете с иностранными клиентами?<div class="faq-icon">+</div></button><div class="faq-answer"><div class="faq-answer-inner">Да, работаю с клиентами из СНГ и других стран. Общаюсь на русском и английском. Оплату принимаю в рублях, долларах, евро. Коммуникация через Telegram, WhatsApp, Discord.</div></div></div>
-
-
-
+ 
+ 
+ 
     </div>
-
-
-
+ 
+ 
+ 
   </div>
-
-
-
+ 
+ 
+ 
 </section>
-
+ 
 <!-- CTA -->
 <section id="cta">
   <div class="cta-orb"></div>
@@ -1231,7 +1440,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-eyebrow">Заявка</div>
@@ -1300,7 +1509,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div class="footer-top">
@@ -1322,7 +1531,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 </div>
   </div>
 </footer>
-
+ 
 <div class="float-cta" id="floatCta" style="opacity:0;transition:opacity .5s;pointer-events:none">
   <!-- 🔗 Замените yourusername -->
   <a href="https://t.me/skeletons_s" target="_blank" class="float-btn float-tg" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
@@ -1331,7 +1540,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 </a>
   <a href="#contact" class="float-btn">Оставить заявку →</a>
 </div>
-
+ 
 <script>
 /* ─── CURSOR ─── */
 const $cur=document.getElementById('cursor'),
@@ -1343,7 +1552,7 @@ document.querySelectorAll('a,button,.service-card,.pricing-card,.review-card,.pf
   el.addEventListener('mouseenter',()=>{$cur.style.width='20px';$cur.style.height='20px';$ring.style.width='52px';$ring.style.height='52px'});
   el.addEventListener('mouseleave',()=>{$cur.style.width='12px';$cur.style.height='12px';$ring.style.width='36px';$ring.style.height='36px'});
 });
-
+ 
 /* ─── PARTICLES ─── */
 const cv=document.getElementById('particleCanvas'),ctx=cv.getContext('2d');
 let W,H,parts=[];
@@ -1356,7 +1565,7 @@ class P{
 }
 for(let i=0;i<50;i++){const p=new P;p.reset();p.life=Math.random()*p.max;parts.push(p)}
 (function draw(){ctx.clearRect(0,0,W,H);parts.forEach(p=>{p.tick();p.draw()});requestAnimationFrame(draw)})();
-
+ 
 /* ─── SCROLL ─── */
 window.addEventListener('scroll',()=>{
   const nav=document.getElementById('navbar');
@@ -1366,22 +1575,22 @@ window.addEventListener('scroll',()=>{
   fc.style.opacity=window.scrollY>500?'1':'0';
   fc.style.pointerEvents=window.scrollY>500?'auto':'none';
 });
-
+ 
 /* ─── AOS ─── */
 const obs=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),80)}),{threshold:.08});
 document.querySelectorAll('.aos').forEach((el,i)=>{el.style.transitionDelay=(i%4)*90+'ms';obs.observe(el)});
-
+ 
 /* ─── SKILL BARS ─── */
 const skillObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll('.skill-bar').forEach((b,i)=>{setTimeout(()=>{b.style.width=b.dataset.width||'80%'},200+i*150)});skillObs.unobserve(e.target)}})},{threshold:.3});
 const as=document.querySelector('.about-skills');if(as)skillObs.observe(as);
-
+ 
 /* ─── FAQ ─── */
 function toggleFaq(btn){
   const item=btn.closest('.faq-item'),ans=item.querySelector('.faq-answer'),was=item.classList.contains('open');
   document.querySelectorAll('.faq-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.faq-answer').style.maxHeight='0'});
   if(!was){item.classList.add('open');ans.style.maxHeight=ans.scrollHeight+'px'}
 }
-
+ 
 /* ─── PORTFOLIO FILTER ─── */
 function filterPortfolio(cat,btn){
   document.querySelectorAll('.pf-tab').forEach(t=>t.classList.remove('active'));
@@ -1394,7 +1603,7 @@ function filterPortfolio(cat,btn){
   const feat=document.querySelector('.pf-card.featured');
   if(feat&&feat.style.display!=='none')feat.style.gridColumn=(cat==='all'||cat==='youtube')?'span 2':'span 1';
 }
-
+ 
 /* ─── VIDEO MODAL (локальные файлы) ─── */
 function openVideoFile(src,poster,btn){
   const card=btn.closest('.pf-card');
@@ -1413,7 +1622,7 @@ function closeVideoBtn(){
   document.body.style.overflow='';
 }
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeVideoBtn()});
-
+ 
 /* ─── MOBILE MENU ─── */
 let menuOpen=false;
 function toggleMenu(){
@@ -1430,34 +1639,34 @@ function toggleMenu(){
   }else closeMobileMenu();
 }
 function closeMobileMenu(){menuOpen=false;const m=document.getElementById('mobileMenu');if(m)m.remove()}
-
+ 
 /* ─── FORM SUBMIT — отправка на email через Formspree ─── */
 /*
   📧 КАК НАСТРОИТЬ ПОЛУЧЕНИЕ ЗАЯВОК:
-
+ 
   ВАРИАНТ 1 — FORMSPREE (бесплатно, на почту):
   1. Зайдите на https://formspree.io → Sign Up (бесплатно)
   2. New Form → укажите вашу почту
   3. Скопируйте endpoint вида: https://formspree.io/f/XXXXXXXX
   4. Вставьте его вместо ВАШFORMSPREE_ID ниже
-
+ 
   ВАРИАНТ 2 — TELEGRAM (через бота):
   1. Создайте бота через @BotFather в Telegram, получите токен
   2. Узнайте ваш chat_id (напишите /start боту @userinfobot)
   3. Вставьте токен и chat_id ниже
 */
-
+ 
 // ── Настройки отправки ──────────────────────────────────────
 const SEND_MODE = 'telegram'; // 'formspree' или 'telegram'
-
+ 
 // Для Formspree: замените на ваш endpoint
 const FORMSPREE_URL = 'https://formspree.io/f/XXXXXXXX';
-
+ 
 // Для Telegram: замените токен и chat_id
 const TG_TOKEN = '8570121010:AAGQUICe2n95E80kurx_ceTTfDPq83f-aOs';
 const TG_CHAT_ID = '1816074749';
 // ────────────────────────────────────────────────────────────
-
+ 
 async function handleSubmit(){
   const btn=document.getElementById('submitBtn');
   const status=document.getElementById('formStatus');
@@ -1468,13 +1677,13 @@ async function handleSubmit(){
   const budget=document.getElementById('f_budget').value;
   const deadline=document.getElementById('f_deadline').value;
   const desc=document.getElementById('f_desc').value.trim();
-
+ 
   if(!name||!contact){status.style.color='#ff6060';status.textContent='⚠️ Заполните имя и контакт';return}
-
+ 
   btn.disabled=true;btn.textContent='Отправляем...';btn.style.opacity='.7';
-
+ 
   const text=`🎬 Новая заявка с сайта BABAN_OFF\n\n👤 Имя: ${name}\n📬 Контакт: ${contact}\n🎥 Тип видео: ${type||'—'}\n📱 Платформа: ${platform||'—'}\n💰 Бюджет: ${budget||'—'}\n⏰ Срок: ${deadline||'—'}\n\n📝 Описание:\n${desc||'—'}`;
-
+ 
   try{
     if(SEND_MODE==='telegram'){
       const r=await fetch(`https://api.telegram.org/bot${TG_TOKEN}/sendMessage`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({chat_id:TG_CHAT_ID,text,parse_mode:'HTML'})});
@@ -1500,7 +1709,7 @@ async function handleSubmit(){
     console.error(err);
   }
 }
-
+ 
 /* ─── COLOR WHEEL ─── */
 function drawColorWheel(){
   const cv2=document.getElementById('colorWheel');if(!cv2)return;
@@ -1514,7 +1723,7 @@ function drawColorWheel(){
   })(ang);
 }
 drawColorWheel();
-
+ 
 /* ─── TIMECODE ─── */
 let tcF=1024*30;
 setInterval(()=>{
@@ -1524,11 +1733,51 @@ setInterval(()=>{
   if(el)el.textContent=`${pad(h)}:${pad(m)}:${pad(s)}:${pad(fr)}`;
   if(fn)fn.textContent=tcF;
 },1000/30);
-
+ 
 /* ─── INFOGRAPHIC RESPONSIVE ─── */
 function checkInf(){const el=document.getElementById('heroInfographic');if(el)el.style.display=window.innerWidth<1100?'none':''}
 checkInf();window.addEventListener('resize',checkInf);
-
+ 
+/* ─── TRUST ORBIT LOGOS ─── */
+(function positionTrustLogos(){
+  const arena=document.getElementById('trustArena');
+  if(!arena)return;
+  const items=arena.querySelectorAll('.trust-logo-item');
+  const total=items.length;
+  const cx=arena.offsetWidth/2, cy=arena.offsetHeight/2;
+  // alternate between two orbit radii for depth
+  const radii=[110,170];
+  let angles=[]; // spread evenly then group alternately inner/outer
+  items.forEach((item,i)=>{
+    const r=radii[i%2];
+    const angle=(i/total)*Math.PI*2 - Math.PI/2;
+    const x=cx+r*Math.cos(angle)-44; // 44=half logo width
+    const y=cy+r*Math.sin(angle)-44;
+    item.style.transform=`translate(${x-cx}px,${y-cy}px)`;
+    item.style.position='absolute';
+    item.style.top='50%';
+    item.style.left='50%';
+    item.style.marginLeft='-44px';
+    item.style.marginTop='-44px';
+    // gentle float animation offset per item
+    item.querySelector('.trust-logo').style.animation=`floatLogo ${3.5+i*.4}s ease-in-out ${i*.25}s infinite`;
+  });
+  // slow orbit: recalculate periodically with rotation
+  let baseAngle=0;
+  function animateOrbit(){
+    baseAngle+=0.0008;
+    items.forEach((item,i)=>{
+      const r=radii[i%2];
+      const angle=(i/total)*Math.PI*2 - Math.PI/2 + baseAngle*(i%2===0?1:-0.7);
+      const x=r*Math.cos(angle);
+      const y=r*Math.sin(angle);
+      item.style.transform=`translate(${x}px,${y}px)`;
+    });
+    requestAnimationFrame(animateOrbit);
+  }
+  animateOrbit();
+})();
+ 
 if('scrollRestoration' in history)history.scrollRestoration='manual';
 window.addEventListener('load',()=>{if(!window.location.hash)window.scrollTo(0,0)});
 </script>
