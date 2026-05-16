@@ -663,48 +663,70 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .pain-icon-wrap img{filter:drop-shadow(0 0 14px rgba(255,85,0,.6)) drop-shadow(0 0 28px rgba(255,85,0,.25));transition:filter .4s,transform .4s}
 .pain-card:hover .pain-icon-wrap img{filter:drop-shadow(0 0 22px rgba(255,85,0,.9)) drop-shadow(0 0 44px rgba(255,170,68,.45));transform:scale(1.08) translateY(-3px)}
  
-/* ═══ TRUST SECTION ═══ */
-#trust{padding:120px 60px;position:relative;z-index:1;overflow:hidden}
+/* ═══ TRUST SECTION — FULLSCREEN FLOATING ═══ */
+#trust{padding:100px 0 0;position:relative;z-index:1;overflow:hidden}
 #trust::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.3),transparent)}
-#trust::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.15),transparent)}
-.trust-intro{text-align:center;margin-bottom:72px}
+.trust-intro{text-align:center;margin-bottom:64px;padding:0 60px}
 .trust-subtitle{font-size:16px;color:var(--text-dim);max-width:560px;margin:16px auto 0;line-height:1.8}
-.trust-counter-row{display:flex;justify-content:center;gap:60px;flex-wrap:wrap;margin-bottom:72px}
-.trust-counter-item{text-align:center}
-.trust-counter-num{font-family:'Bebas Neue',sans-serif;font-size:64px;background:linear-gradient(135deg,var(--fire),var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;filter:drop-shadow(0 0 20px rgba(255,85,0,.3))}
-.trust-counter-label{font-size:11px;color:var(--text-faint);letter-spacing:3px;text-transform:uppercase;margin-top:6px}
-.trust-arena{position:relative;height:400px;max-width:840px;margin:0 auto}
-.trust-arena-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:520px;height:520px;background:radial-gradient(circle,rgba(255,85,0,.09) 0%,rgba(255,85,0,.03) 45%,transparent 70%);pointer-events:none;border-radius:50%;animation:arenaPulse 5s ease-in-out infinite}
-@keyframes arenaPulse{0%,100%{opacity:.7;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.06)}}
-.trust-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);border:1px solid rgba(255,85,0,.1);border-radius:50%;pointer-events:none}
-.trust-ring-1{width:240px;height:240px;animation:spinRing 22s linear infinite}
-.trust-ring-2{width:400px;height:400px;animation:spinRing 36s linear infinite reverse;border-color:rgba(255,85,0,.06)}
-.trust-ring-3{width:560px;height:560px;animation:spinRing 52s linear infinite;border-style:dashed;border-color:rgba(255,85,0,.04)}
-@keyframes spinRing{from{transform:translate(-50%,-50%) rotate(0)}to{transform:translate(-50%,-50%) rotate(360deg)}}
-@keyframes floatLogo{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-8px) scale(1.03)}}
-.trust-logo-item{will-change:transform}
-.trust-logo{width:88px;height:88px;background:linear-gradient(135deg,rgba(24,18,12,.9),rgba(10,8,6,.95));border:1px solid rgba(255,255,255,.08);border-radius:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;backdrop-filter:blur(20px);box-shadow:0 10px 40px rgba(0,0,0,.7),inset 0 1px 0 rgba(255,255,255,.06);transition:transform .45s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s;cursor:default;position:relative;overflow:hidden}
-.trust-logo::before{content:'';position:absolute;top:-40%;left:-40%;width:180%;height:180%;background:radial-gradient(circle at 50% 0%,rgba(255,85,0,.2),transparent 60%);opacity:0;transition:opacity .4s}
-.trust-logo:hover{border-color:rgba(255,85,0,.5);box-shadow:0 20px 60px rgba(0,0,0,.8),0 0 30px rgba(255,85,0,.2),inset 0 1px 0 rgba(255,255,255,.1)}
-.trust-logo:hover::before{opacity:1}
-.trust-logo img{width:44px;height:44px;object-fit:contain;filter:brightness(.75) saturate(.5);transition:filter .4s,transform .4s}
-.trust-logo:hover img{filter:brightness(1.1) saturate(1.2) drop-shadow(0 0 6px rgba(255,85,0,.5));transform:scale(1.1)}
-.trust-logo-text{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:2px;color:rgba(255,255,255,.4);text-align:center;line-height:1.2;transition:color .3s;padding:0 6px}
+/* fullscreen arena */
+.trust-float-arena{position:relative;width:100%;height:520px;overflow:hidden}
+.trust-arena-bg{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70%;height:80%;background:radial-gradient(ellipse 60% 50% at 50% 50%,rgba(255,85,0,.07) 0%,rgba(255,85,0,.02) 55%,transparent 75%);pointer-events:none;border-radius:50%;animation:arenaPulse 6s ease-in-out infinite}
+@keyframes arenaPulse{0%,100%{opacity:.6;transform:translate(-50%,-50%) scale(1)}50%{opacity:1;transform:translate(-50%,-50%) scale(1.08)}}
+/* edge fade masks */
+.trust-float-arena::before,.trust-float-arena::after{content:'';position:absolute;top:0;bottom:0;width:140px;z-index:10;pointer-events:none}
+.trust-float-arena::before{left:0;background:linear-gradient(90deg,var(--bg),transparent)}
+.trust-float-arena::after{right:0;background:linear-gradient(270deg,var(--bg),transparent)}
+/* logo wrapper */
+.trust-logo-item{position:absolute;top:0;left:0;will-change:transform}
+/* ── LIQUID GLASS LOGO ── */
+.trust-logo{
+  width:var(--logo-size,118px);height:var(--logo-size,118px);border-radius:22px;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;
+  position:relative;overflow:hidden;cursor:default;
+  background:
+    radial-gradient(circle at 32% 28%,rgba(255,160,60,.16) 0%,rgba(255,85,0,.07) 45%,transparent 65%),
+    linear-gradient(145deg,rgba(255,255,255,.13) 0%,rgba(255,255,255,.03) 35%,rgba(255,85,0,.05) 70%,rgba(0,0,0,.38) 100%);
+  backdrop-filter:blur(18px) saturate(1.8);
+  -webkit-backdrop-filter:blur(18px) saturate(1.8);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 16px 48px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.22),inset 0 -1px 0 rgba(255,85,0,.08),0 0 0 1px rgba(255,85,0,.1);
+  transition:box-shadow .4s,border-color .4s;
+}
+/* FIX: make ::before 3x larger so rotating corners never poke out of overflow:hidden */
+.trust-logo::before{
+  content:'';
+  position:absolute;
+  /* 3× the size, centred — rotation corners stay outside the visible area */
+  width:300%;height:300%;
+  top:50%;left:50%;
+  transform-origin:center center;
+  margin-top:-150%;margin-left:-150%;
+  border-radius:0;
+  background:conic-gradient(from 0deg at 50% 50%,
+    rgba(255,85,0,.0)    0deg,
+    rgba(255,180,60,.14) 60deg,
+    rgba(255,255,255,.06) 120deg,
+    rgba(255,85,0,.0)    180deg,
+    rgba(255,200,80,.10) 240deg,
+    rgba(255,255,255,.03) 300deg,
+    rgba(255,85,0,.0)    360deg);
+  animation:auroraRotate 10s linear infinite;
+  mix-blend-mode:screen;
+  pointer-events:none;
+}
+.trust-logo::after{
+  content:'';position:absolute;top:7%;left:11%;width:44%;height:40%;
+  background:radial-gradient(ellipse,rgba(255,255,255,.26) 0%,rgba(255,255,255,.06) 55%,transparent 80%);
+  border-radius:50%;transform:rotate(-25deg);pointer-events:none;mix-blend-mode:screen;
+}
+.trust-logo:hover{border-color:rgba(255,85,0,.45);box-shadow:0 24px 64px rgba(0,0,0,.7),0 0 32px rgba(255,85,0,.25),inset 0 1px 0 rgba(255,255,255,.35),0 0 0 1px rgba(255,85,0,.3)}
+.trust-logo-text{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;color:rgba(255,255,255,.55);text-align:center;line-height:1.3;padding:0 6px;position:relative;z-index:2;transition:color .3s}
 .trust-logo:hover .trust-logo-text{color:var(--fire)}
-.trust-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;z-index:10;pointer-events:none}
-.trust-center-badge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:112px;height:112px;background:linear-gradient(135deg,rgba(255,85,0,.12),rgba(255,85,0,.04));border:2px solid rgba(255,85,0,.4);border-radius:50%;box-shadow:0 0 50px rgba(255,85,0,.18),0 0 90px rgba(255,85,0,.07),inset 0 0 25px rgba(255,85,0,.04);animation:centerPulse 3s ease-in-out infinite}
-@keyframes centerPulse{0%,100%{box-shadow:0 0 40px rgba(255,85,0,.15),0 0 80px rgba(255,85,0,.05)}50%{box-shadow:0 0 70px rgba(255,85,0,.3),0 0 110px rgba(255,85,0,.1)}}
-.trust-center-icon{font-size:34px;line-height:1}
-.trust-center-label{font-family:'Bebas Neue',sans-serif;font-size:10px;color:var(--fire);letter-spacing:3px;margin-top:4px}
-.trust-quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:56px}
-.trust-quote{background:linear-gradient(135deg,rgba(20,15,10,.6),rgba(10,8,6,.85));border:1px solid rgba(255,255,255,.05);border-radius:16px;padding:28px 28px 24px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
-.trust-quote::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.07),transparent)}
-.trust-quote:hover{border-color:rgba(255,85,0,.2);transform:translateY(-4px)}
-.trust-mark{position:absolute;top:14px;right:18px;font-family:'Syne',sans-serif;font-size:52px;font-weight:800;color:rgba(255,85,0,.08);line-height:1;pointer-events:none}
-.trust-quote-text{font-size:14px;color:var(--text-dim);line-height:1.75;font-style:italic;margin-bottom:16px}
-.trust-quote-author{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;color:var(--fire);letter-spacing:1px}
-.trust-quote-role{font-size:11px;color:var(--text-faint);margin-top:2px}
- 
+.trust-logo>span{position:relative;z-index:2;filter:drop-shadow(0 0 4px rgba(255,85,0,.3));transition:filter .3s,transform .3s}
+.trust-logo:hover>span{filter:drop-shadow(0 0 10px rgba(255,85,0,.6));transform:scale(1.1)}
+/* mobile: smaller logos */
+@media(max-width:768px){:root{--logo-size:76px}}
+
 /* ══ RESPONSIVE ══ */
 @media(max-width:1100px){
   nav{top:10px;left:3%;right:3%;padding:14px 20px}
@@ -884,7 +906,59 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   100%{background-position:0% 50%}
 }
 
-/* ── NAV LINKS: underline draw ── */
+/* ── NAV LIQUID CURSOR ── */
+#navLiquid{
+  position:absolute;inset:0;border-radius:22px;
+  pointer-events:none;overflow:hidden;z-index:1;
+  opacity:0;transition:opacity .5s;
+}
+nav:hover #navLiquid{opacity:1}
+
+/* primary warm glow */
+#navSpot{
+  position:absolute;
+  width:220px;height:140px;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(ellipse 50% 70% at 50% 50%,
+    rgba(255,255,255,.22) 0%,
+    rgba(255,180,70,.12) 35%,
+    rgba(255,100,30,.06) 60%,
+    transparent 75%
+  );
+  filter:blur(10px);
+  mix-blend-mode:screen;
+  pointer-events:none;
+  will-change:left,top;
+}
+/* secondary tight chromatic core */
+#navSpot2{
+  position:absolute;
+  width:80px;height:80px;
+  transform:translate(-50%,-50%);
+  background:radial-gradient(circle,
+    rgba(255,255,255,.35) 0%,
+    rgba(255,220,140,.18) 40%,
+    transparent 70%
+  );
+  filter:blur(5px);
+  mix-blend-mode:screen;
+  pointer-events:none;
+  will-change:left,top;
+}
+/* prismatic border flash on hover */
+nav::before{
+  transition:opacity .5s;
+}
+nav:hover::before{
+  opacity:1;
+  background:linear-gradient(105deg,
+    rgba(255,255,255,.2) 0%,
+    rgba(255,255,255,.06) 25%,
+    transparent 45%,
+    rgba(255,100,20,.07) 65%,
+    rgba(255,200,80,.12) 85%,
+    rgba(255,255,255,.16) 100%);
+}
 .nav-links a{transition:color .25s,letter-spacing .2s}
 .nav-links a:hover{letter-spacing:2.5px}
 
@@ -961,10 +1035,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .pf-card:nth-child(4){animation-delay:.2s}
 @keyframes cardEntrance{from{opacity:0;transform:translateY(24px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
 
-/* ── ABOUT RINGS: dynamic speed on hover ── */
-.about-avatar-wrap:hover .about-ring-1{animation-duration:6s}
-.about-avatar-wrap:hover .about-ring-2{animation-duration:9s}
-.about-avatar-wrap:hover .about-ring-3{animation-duration:12s}
+/* about rings keep constant speed — no duration change on hover */
 
 /* section separators: static, no animation to avoid repaint flicker */
 
@@ -1015,13 +1086,14 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
  
 <!-- NAV -->
 <nav id="navbar">
+  <div id="navLiquid" aria-hidden="true"><div id="navSpot"></div><div id="navSpot2"></div></div>
   <a href="#hero" class="nav-logo">BABAN<em>_OFF</em></a>
   <ul class="nav-links">
     <li><a href="#about">Обо мне</a></li>
     <li><a href="#services">Услуги</a></li>
     <li><a href="#trust">Клиенты</a></li>
     <li><a href="#portfolio">Работы</a></li>
-    <li><a href="#pricing">Цены</a></li>
+    
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Контакт</a></li>
   </ul>
@@ -1617,180 +1689,65 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
   <div class="trust-intro aos">
     <div class="section-eyebrow">Доверие клиентов</div>
     <h2 class="section-title">НАМ <span class="accent">ДОВЕРЯЮТ</span><br>ЛИДЕРЫ РЫНКА</h2>
-    <p class="trust-subtitle">Работаю с брендами и проектами, которые ценят визуальное качество выше средних стандартов. Список постоянно растёт.</p>
+    <p class="trust-subtitle">Работаю с брендами и проектами, которые ценят визуальное качество выше других. Список постоянно растёт.</p>
   </div>
- 
-  <div class="trust-counter-row aos">
-    <div class="trust-counter-item">
-      <div class="trust-counter-num">1200<span style="font-size:36px">+</span></div>
-      <div class="trust-counter-label">Проектов выполнено</div>
-    </div>
-    <div class="trust-counter-item">
-      <div class="trust-counter-num">47<span style="font-size:36px">+</span></div>
-      <div class="trust-counter-label">Постоянных клиентов</div>
-    </div>
-    <div class="trust-counter-item">
-      <div class="trust-counter-num">12<span style="font-size:36px">+</span></div>
-      <div class="trust-counter-label">Стран сотрудничества</div>
-    </div>
-    <div class="trust-counter-item">
-      <div class="trust-counter-num">3<span style="font-size:36px">г.</span></div>
-      <div class="trust-counter-label">В индустрии</div>
-    </div>
-  </div>
- 
-  <!-- Floating logos arena -->
-  <div class="trust-arena" id="trustArena">
+
+  <!-- Fullscreen floating logos -->
+  <div class="trust-float-arena" id="trustArena">
+    <!-- ambient background glow -->
     <div class="trust-arena-bg"></div>
-    <div class="trust-ring trust-ring-1"></div>
-    <div class="trust-ring trust-ring-2"></div>
-    <div class="trust-ring trust-ring-3"></div>
- 
-    <!-- Centre badge -->
-    <div class="trust-center">
-      <div class="trust-center-badge">
-        <span class="trust-center-icon">🎬</span>
-        <span class="trust-center-label">BABAN_OFF</span>
-      </div>
-    </div>
- 
-    <!--
-      ════════════════════════════════════════════════════════
-      🖼️ КАК ЗАМЕНИТЬ ЛОГОТИПЫ:
-      1. Сохраните PNG логотипа в папку сайта (лучше 100×100px,
-         на прозрачном фоне)
-      2. Замените src="logos/logo-X.png" на ваш путь
-      3. Замените текст внутри trust-logo-text на название
-         компании
-      4. Логотипы расставляются JavaScript-ом по кругу
-         автоматически — просто добавляйте .trust-logo-item
-      ════════════════════════════════════════════════════════
-    -->
- 
-    <div class="trust-logo-item" data-orbit="1">
+
+    <div class="trust-logo-item">
       <div class="trust-logo">
-        <!-- <img src="logos/client-1.png" alt=""> -->
-        <span style="font-size:26px">🏢</span>
+        <span style="font-size:32px">🏢</span>
         <div class="trust-logo-text">DEFI<br>TERMINAL</div>
       </div>
     </div>
- 
-    <div class="trust-logo-item" data-orbit="2">
+    <div class="trust-logo-item">
       <div class="trust-logo">
-        <!-- <img src="logos/client-2.png" alt=""> -->
-        <span style="font-size:26px">🏗️</span>
+        <span style="font-size:32px">🏗️</span>
         <div class="trust-logo-text">ARCH<br>STUDIO</div>
       </div>
     </div>
- 
-    <div class="trust-logo-item" data-orbit="3">
+    <div class="trust-logo-item">
       <div class="trust-logo">
-        <!-- <img src="logos/client-3.png" alt=""> -->
-        <span style="font-size:26px">⛵</span>
+        <span style="font-size:32px">⛵</span>
         <div class="trust-logo-text">YACHT<br>MEDIA</div>
       </div>
     </div>
- 
-    <div class="trust-logo-item" data-orbit="4">
+    <div class="trust-logo-item">
       <div class="trust-logo">
-        <!-- <img src="logos/client-4.png" alt=""> -->
-        <span style="font-size:26px">🔐</span>
+        <span style="font-size:32px">🔐</span>
         <div class="trust-logo-text">CRYPTO<br>NEWS</div>
       </div>
     </div>
- 
-    <div class="trust-logo-item" data-orbit="5">
+    <div class="trust-logo-item">
       <div class="trust-logo">
-        <!-- <img src="logos/client-5.png" alt=""> -->
-        <span style="font-size:26px">📱</span>
+        <span style="font-size:32px">📱</span>
         <div class="trust-logo-text">SMM<br>AGENCY</div>
       </div>
     </div>
- 
-    <div class="trust-logo-item" data-orbit="6">
+    <div class="trust-logo-item">
       <div class="trust-logo">
-        <!-- <img src="logos/client-6.png" alt=""> -->
-        <span style="font-size:26px">🎯</span>
+        <span style="font-size:32px">🎯</span>
         <div class="trust-logo-text">TARGET<br>PRO</div>
       </div>
     </div>
- 
-    <div class="trust-logo-item" data-orbit="7">
+    <div class="trust-logo-item">
       <div class="trust-logo">
-        <!-- <img src="logos/client-7.png" alt=""> -->
-        <span style="font-size:26px">🏆</span>
+        <span style="font-size:32px">🏆</span>
         <div class="trust-logo-text">EXHIBI<br>TION</div>
       </div>
     </div>
- 
-    <div class="trust-logo-item" data-orbit="8">
+    <div class="trust-logo-item">
       <div class="trust-logo">
-        <!-- <img src="logos/client-8.png" alt=""> -->
-        <span style="font-size:26px">✨</span>
+        <span style="font-size:32px">✨</span>
         <div class="trust-logo-text">MOTION<br>BRAND</div>
       </div>
     </div>
   </div>
- 
-  <!-- Trust quotes -->
-  <div class="trust-quotes">
-    <div class="trust-quote aos">
-      <div class="trust-mark">"</div>
-      <div class="trust-quote-text">Работали над запуском DeFi-продукта. Итоговый визуал вышел на уровне мировых финтех-брендов — такого от фриланса не ожидали.</div>
-      <div class="trust-quote-author">DeFi Terminal</div>
-      <div class="trust-quote-role">Криптовалютная платформа, Dubai</div>
-    </div>
-    <div class="trust-quote aos">
-      <div class="trust-mark">"</div>
-      <div class="trust-quote-text">Три месяца ведения контента — охваты выросли в 4 раза. BABAN_OFF понимает, как должна работать картинка в недвижимости.</div>
-      <div class="trust-quote-author">Arch Studio</div>
-      <div class="trust-quote-role">Архитектурное бюро</div>
-    </div>
-    <div class="trust-quote aos">
-      <div class="trust-mark">"</div>
-      <div class="trust-quote-text">Выставочный ролик с 3D-интеграцией получил отдельную статью в отраслевом журнале. Клиент остался в полном восторге.</div>
-      <div class="trust-quote-author">Exhibition Case</div>
-      <div class="trust-quote-role">Красноярский край, промышленная выставка</div>
-    </div>
-  </div>
 </section>
  
-<!-- PRICING -->
-<section id="pricing">
-  <div class="section-eyebrow">Тарифы</div>
-  <h2 class="section-title">ПРОЗРАЧНЫЕ <span class="accent">ЦЕНЫ</span></h2>
-  <p class="section-desc">Никаких скрытых платежей. Выбираете нужный формат — получаете результат в срок.</p>
-  <div class="pricing-grid">
-    <div class="pricing-card aos">
-      <div class="plan-name">Старт</div>
-      <div class="plan-sub">Для одного ролика или пробы</div>
-      <div class="plan-price"><div class="amount"><span class="currency">от </span>5 000 ₽</div><div class="period">за 1 видео</div></div>
-      <ul class="plan-features">
-        <li>Монтаж до 3 минут</li><li>2 раунда правок</li><li>Цветокоррекция базовая</li><li>Музыкальное сопровождение</li><li>Срок: 3 рабочих дня</li><li>Выходной формат: 1 версия</li><li class="muted">Motion-графика</li><li class="muted">Приоритетная поддержка</li>
-      </ul>
-      <a href="#contact" class="btn-plan">Заказать</a>
-    </div>
-    <div class="pricing-card featured aos">
-      <div class="featured-badge">⚡ Популярный</div>
-      <div class="plan-name">Профи</div>
-      <div class="plan-sub">Для серьёзного контента</div>
-      <div class="plan-price"><div class="amount"><span class="currency">от </span>12 000 ₽</div><div class="period">за 1 видео</div></div>
-      <ul class="plan-features">
-        <li>Монтаж до 15 минут</li><li>3 раунда правок</li><li>Профессиональный грейдинг</li><li>Motion-графика и титры</li><li>Вертикальная + горизонтальная версия</li><li>Срок: 3–5 дней</li><li>Звуковой дизайн</li><li class="muted">Выделенный день связи 24/7</li>
-      </ul>
-      <a href="#contact" class="btn-plan">Заказать</a>
-    </div>
-    <div class="pricing-card aos">
-      <div class="plan-name">Поток</div>
-      <div class="plan-sub">Регулярное сотрудничество</div>
-      <div class="plan-price"><div class="amount"><span class="currency">от </span>30 000 ₽</div><div class="period">в месяц</div></div>
-      <ul class="plan-features">
-        <li>До 12 видео в месяц</li><li>Неограниченные правки</li><li>Полный постпродакшн</li><li>Motion-графика входит</li><li>Выделенный менеджер</li><li>Приоритетные сроки</li><li>Связь 24/7</li><li>Закрывающие документы</li>
-      </ul>
-      <a href="#contact" class="btn-plan">Обсудить</a>
-    </div>
-  </div>
-</section>
  
 <!-- TESTIMONIALS -->
 <section id="testimonials">
@@ -1989,7 +1946,7 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
       <div class="footer-logo">BABAN<em>_OFF</em></div>
       <div class="footer-tagline">Видеомонтаж, который работает на результат</div>
     </div>
-    <div class="footer-links-group"><h5>Навигация</h5><ul><li><a href="#about">Обо мне</a></li><li><a href="#services">Услуги</a></li><li><a href="#portfolio">Работы</a></li><li><a href="#pricing">Цены</a></li></ul></div>
+    <div class="footer-links-group"><h5>Навигация</h5><ul><li><a href="#about">Обо мне</a></li><li><a href="#services">Услуги</a></li><li><a href="#portfolio">Работы</a></li><li><a href="#faq">FAQ</a></li></ul></div>
     <div class="footer-links-group"><h5>Информация</h5><ul><li><a href="#faq">FAQ</a></li><li><a href="#testimonials">Отзывы</a></li><li><a href="#contact">Контакты</a></li><li><a href="#">Конфиденциальность</a></li></ul></div>
     <div class="footer-links-group"><h5>Контакт</h5><ul><li><a href="#">Telegram</a></li><li><a href="#">Instagram</a></li><li><a href="#">YouTube</a></li><li><a href="#">Email</a></li></ul></div>
   </div>
@@ -2106,7 +2063,7 @@ function toggleMenu(){
   if(menuOpen){
     const m=document.createElement('div');m.id='mobileMenu';
     m.style.cssText='position:fixed;top:72px;left:3%;right:3%;background:rgba(10,8,6,.97);backdrop-filter:blur(24px);border:1px solid rgba(255,85,0,.15);border-radius:16px;z-index:999;padding:20px 24px;';
-    const links=[['Обо мне','about'],['Услуги','services'],['Боли','pain'],['Работы','portfolio'],['Цены','pricing'],['FAQ','faq'],['Контакт','contact']];
+    const links=[['Обо мне','about'],['Услуги','services'],['Боли','pain'],['Работы','portfolio'],['FAQ','faq'],['Контакт','contact']];
     m.innerHTML=links.map(([text,anchor],i)=>{
       const last=i===links.length-1;
       return `<a href="#${anchor}" onclick="closeMobileMenu()" style="display:block;color:${last?'#fff':'#A89880'};text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:600;font-size:13px;letter-spacing:1px;${last?'background:linear-gradient(135deg,#FF5500,#FF7A2F);margin-top:14px;padding:13px 20px;border-bottom:none;border-radius:8px;text-align:center;':''}">${text}</a>`;
@@ -2214,46 +2171,116 @@ setInterval(()=>{
 function checkInf(){const el=document.getElementById('heroInfographic');if(el)el.style.display=window.innerWidth<1100?'none':''}
 checkInf();window.addEventListener('resize',checkInf);
  
-/* ─── TRUST ORBIT LOGOS ─── */
-(function positionTrustLogos(){
-  const arena=document.getElementById('trustArena');
-  if(!arena)return;
-  const items=arena.querySelectorAll('.trust-logo-item');
-  const total=items.length;
-  const cx=arena.offsetWidth/2, cy=arena.offsetHeight/2;
-  // alternate between two orbit radii for depth
-  const radii=[110,170];
-  let angles=[]; // spread evenly then group alternately inner/outer
-  items.forEach((item,i)=>{
-    const r=radii[i%2];
-    const angle=(i/total)*Math.PI*2 - Math.PI/2;
-    const x=cx+r*Math.cos(angle)-44; // 44=half logo width
-    const y=cy+r*Math.sin(angle)-44;
-    item.style.transform=`translate(${x-cx}px,${y-cy}px)`;
-    item.style.position='absolute';
-    item.style.top='50%';
-    item.style.left='50%';
-    item.style.marginLeft='-44px';
-    item.style.marginTop='-44px';
-    // gentle float animation offset per item
-    item.querySelector('.trust-logo').style.animation=`floatLogo ${3.5+i*.4}s ease-in-out ${i*.25}s infinite`;
-  });
-  // slow orbit: recalculate periodically with rotation
-  let baseAngle=0;
-  function animateOrbit(){
-    baseAngle+=0.0008;
-    items.forEach((item,i)=>{
-      const r=radii[i%2];
-      const angle=(i/total)*Math.PI*2 - Math.PI/2 + baseAngle*(i%2===0?1:-0.7);
-      const x=r*Math.cos(angle);
-      const y=r*Math.sin(angle);
-      item.style.transform=`translate(${x}px,${y}px)`;
+/* ─── TRUST — COLLISION PHYSICS ─── */
+(function(){
+  const arena = document.getElementById('trustArena');
+  if (!arena) return;
+  const items = Array.from(arena.querySelectorAll('.trust-logo-item'));
+
+  function init() {
+    const W = arena.offsetWidth;
+    const H = arena.offsetHeight;
+    // logo size from CSS variable
+    const LOGO = window.innerWidth < 768 ? 76 : 118;
+    const R = LOGO / 2; // collision radius
+
+    // set CSS var so logos render at correct size
+    arena.style.setProperty('--logo-size', LOGO + 'px');
+
+    // place logos in a grid to avoid initial overlap
+    const cols = Math.ceil(Math.sqrt(items.length * W / H));
+    const rows = Math.ceil(items.length / cols);
+    const balls = items.map((item, i) => {
+      const col = i % cols, row = Math.floor(i / cols);
+      const cellW = W / cols, cellH = H / rows;
+      return {
+        item,
+        x: cellW * col + cellW/2 + (Math.random()-.5) * cellW * .3,
+        y: cellH * row + cellH/2 + (Math.random()-.5) * cellH * .3,
+        vx: (Math.random()-.5) * .55,
+        vy: (Math.random()-.5) * .55,
+        r: R
+      };
     });
-    requestAnimationFrame(animateOrbit);
+
+    // clamp to bounds
+    balls.forEach(b => {
+      b.x = Math.max(b.r + 2, Math.min(W - b.r - 2, b.x));
+      b.y = Math.max(b.r + 2, Math.min(H - b.r - 2, b.y));
+    });
+
+    const DAMP  = 0.9985;  // air friction — very slow deceleration
+    const REST  = 0.72;    // restitution — bouncy but premium
+    const VMIN  = 0.12;    // minimum drift speed
+    const VMAX  = 1.8;     // cap so nothing flies wild
+
+    function tick() {
+      // ── move ──
+      balls.forEach(b => {
+        b.x += b.vx;
+        b.y += b.vy;
+
+        // wall bounce
+        if (b.x - b.r < 0)   { b.x = b.r;      b.vx =  Math.abs(b.vx) * REST; }
+        if (b.x + b.r > W)   { b.x = W - b.r;  b.vx = -Math.abs(b.vx) * REST; }
+        if (b.y - b.r < 0)   { b.y = b.r;      b.vy =  Math.abs(b.vy) * REST; }
+        if (b.y + b.r > H)   { b.y = H - b.r;  b.vy = -Math.abs(b.vy) * REST; }
+
+        // friction
+        b.vx *= DAMP;
+        b.vy *= DAMP;
+
+        // maintain minimum drift so they never freeze
+        const spd = Math.hypot(b.vx, b.vy);
+        if (spd < VMIN) {
+          const a = Math.random() * Math.PI * 2;
+          b.vx += Math.cos(a) * .08;
+          b.vy += Math.sin(a) * .08;
+        }
+        // cap max speed
+        if (spd > VMAX) { b.vx *= VMAX/spd; b.vy *= VMAX/spd; }
+      });
+
+      // ── collisions (O(n²) fine for 8 balls) ──
+      for (let i = 0; i < balls.length; i++) {
+        for (let j = i + 1; j < balls.length; j++) {
+          const a = balls[i], b = balls[j];
+          const dx = b.x - a.x, dy = b.y - a.y;
+          const dist = Math.hypot(dx, dy);
+          const minD = a.r + b.r;
+
+          if (dist < minD && dist > 0.001) {
+            // push apart so they don't stick
+            const nx = dx / dist, ny = dy / dist;
+            const push = (minD - dist) / 2 + .5;
+            a.x -= nx * push; a.y -= ny * push;
+            b.x += nx * push; b.y += ny * push;
+
+            // elastic velocity exchange along collision normal
+            const dvx = b.vx - a.vx, dvy = b.vy - a.vy;
+            const dot = dvx * nx + dvy * ny;
+            if (dot < 0) { // only if approaching
+              const imp = dot * REST;
+              a.vx += imp * nx; a.vy += imp * ny;
+              b.vx -= imp * nx; b.vy -= imp * ny;
+            }
+          }
+        }
+      }
+
+      // ── render ──
+      balls.forEach(b => {
+        b.item.style.transform = `translate(${(b.x - b.r).toFixed(2)}px,${(b.y - b.r).toFixed(2)}px)`;
+      });
+
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
   }
-  animateOrbit();
+
+  if (document.readyState === 'complete') init();
+  else window.addEventListener('load', init);
 })();
- 
 if('scrollRestoration' in history)history.scrollRestoration='manual';
 window.addEventListener('load',()=>{if(!window.location.hash)window.scrollTo(0,0)});
 
@@ -2494,7 +2521,35 @@ document.querySelectorAll('a,button,.service-card,.pricing-card,.review-card,.pf
   });
 })();
 
-/* ── HERO TITLE: subtle glow on load (no glitch) ── */
+/* ── NAV LIQUID CURSOR ── */
+(function(){
+  const nav    = document.getElementById('navbar');
+  const liquid = document.getElementById('navLiquid');
+  const spot   = document.getElementById('navSpot');
+  const spot2  = document.getElementById('navSpot2');
+  if (!nav || !liquid || !spot || !spot2) return;
+
+  // primary: slow lerp   secondary: fast lerp
+  let tx=0,ty=0,  x1=0,y1=0,  x2=0,y2=0;
+
+  nav.addEventListener('mousemove', e => {
+    const r = nav.getBoundingClientRect();
+    tx = e.clientX - r.left;
+    ty = e.clientY - r.top;
+  });
+
+  (function tick(){
+    x1 += (tx - x1) * 0.1;  y1 += (ty - y1) * 0.1;   // soft lag
+    x2 += (tx - x2) * 0.22; y2 += (ty - y2) * 0.22;  // snappy core
+
+    spot.style.left  = x1 + 'px';
+    spot.style.top   = y1 + 'px';
+    spot2.style.left = x2 + 'px';
+    spot2.style.top  = y2 + 'px';
+
+    requestAnimationFrame(tick);
+  })();
+})();
 (function(){
   const accent = document.querySelector('.hero-title .accent');
   if (!accent) return;
@@ -2516,17 +2571,28 @@ document.querySelectorAll('a,button,.service-card,.pricing-card,.review-card,.pf
   }, {passive: true});
 })();
 
-/* ── ABOUT CIRCLE: mouse parallax ── */
+/* ── ABOUT CIRCLE: inner parallax only, rings untouched ── */
 (function(){
   const wrap = document.querySelector('.about-avatar-wrap');
-  if (!wrap) return;
+  const circle = wrap ? wrap.querySelector('.about-circle') : null;
+  if (!wrap || !circle) return;
+
+  let tx = 0, ty = 0, cx = 0, cy = 0;
+
   wrap.addEventListener('mousemove', e => {
     const rect = wrap.getBoundingClientRect();
-    const x = (e.clientX - rect.left - rect.width/2) / rect.width;
-    const y = (e.clientY - rect.top - rect.height/2) / rect.height;
-    wrap.style.transform = `perspective(600px) rotateY(${x*15}deg) rotateX(${-y*15}deg)`;
+    tx = (e.clientX - rect.left - rect.width  / 2) / rect.width  * 14;
+    ty = (e.clientY - rect.top  - rect.height / 2) / rect.height * 14;
   });
-  wrap.addEventListener('mouseleave', () => { wrap.style.transform = ''; });
+  wrap.addEventListener('mouseleave', () => { tx = 0; ty = 0; });
+
+  (function tick() {
+    cx += (tx - cx) * 0.1;
+    cy += (ty - cy) * 0.1;
+    circle.style.transform =
+      `perspective(500px) rotateY(${cx}deg) rotateX(${-cy}deg)`;
+    requestAnimationFrame(tick);
+  })();
 })();
 </script>
 </body>
