@@ -2347,13 +2347,36 @@ function toggleFaq(btn){
 function filterPortfolio(cat,btn){
   document.querySelectorAll('.pf-tab').forEach(t=>t.classList.remove('active'));
   btn.classList.add('active');
-  document.querySelectorAll('.pf-card').forEach(card=>{
-    const show=cat==='all'||card.dataset.category===cat;
-    card.style.display=show?'':'none';
-    if(show){card.style.opacity='0';card.style.transform='translateY(20px)';requestAnimationFrame(()=>{card.style.transition='opacity .4s,transform .4s';card.style.opacity='1';card.style.transform='translateY(0)'})}
+  var isMobile = window.innerWidth <= 768;
+  document.querySelectorAll('.pf-card').forEach(function(card){
+    var show = cat==='all' || card.dataset.category===cat;
+    if(!show){
+      card.style.display = 'none';
+      card.style.opacity = '';
+      card.style.transform = '';
+      card.style.transition = '';
+    } else {
+      card.style.display = '';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'none';
+      requestAnimationFrame(function(){
+        requestAnimationFrame(function(){
+          card.style.transition = 'opacity .4s,transform .4s';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        });
+      });
+    }
   });
-  const feat=document.querySelector('.pf-card.featured');
-  if(feat&&feat.style.display!=='none')feat.style.gridColumn=(cat==='all'||cat==='youtube')?'span 2':'span 1';
+  var feat = document.querySelector('.pf-card.featured');
+  if(feat){
+    if(feat.style.display === 'none'){
+      feat.style.gridColumn = '';
+    } else {
+      feat.style.gridColumn = (!isMobile && (cat==='all'||cat==='youtube')) ? 'span 2' : '';
+    }
+  }
 }
  
 /* ─── VIDEO MODAL (локальные файлы) ─── */
