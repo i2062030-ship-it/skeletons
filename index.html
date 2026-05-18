@@ -585,9 +585,10 @@ section, #hero, #about, footer{overflow:hidden}
 .faq-item{border-bottom:1px solid rgba(255,255,255,.06)}
  
 /* CTA — fixed clipping */
-#cta{background:transparent;text-align:center;padding:140px 60px;position:relative;overflow:clip}
-.cta-orb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(700px,90vw);height:min(700px,90vw);background:radial-gradient(circle,rgba(255,85,0,.12) 0%,rgba(255,85,0,.04) 40%,transparent 70%);pointer-events:none;animation:orbFloat 6s ease-in-out infinite}
-.cta-content{position:relative;z-index:2}
+#cta{background:transparent;text-align:center;padding:140px 60px;position:relative;overflow:visible}
+#cta::after{content:'';position:absolute;inset:0;pointer-events:none;z-index:0}
+.cta-orb{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(1000px,130vw);height:min(1000px,130vw);background:radial-gradient(circle,rgba(255,85,0,.14) 0%,rgba(255,85,0,.07) 30%,rgba(255,85,0,.02) 60%,transparent 75%);pointer-events:none;animation:orbFloat 6s ease-in-out infinite;z-index:1}
+.cta-content{position:relative;z-index:2;isolation:isolate}
 .cta-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,85,0,.1);border:1px solid rgba(255,85,0,.25);color:var(--ember);padding:10px 24px;font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin-bottom:36px;border-radius:100px}
 .cta-fire{font-size:16px;animation:tagPulse 1.5s ease-in-out infinite}
 .cta-title{font-family:'Syne',sans-serif;font-size:clamp(48px,8vw,110px);font-weight:800;line-height:.9;letter-spacing:-2px;margin-bottom:28px}
@@ -635,8 +636,46 @@ footer::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;back
 .footer-bottom{display:flex;justify-content:space-between;align-items:center}
 .footer-copy{font-size:12px;color:var(--text-faint)}
 .footer-socials{display:flex;gap:10px}
-.social-link{width:38px;height:38px;background:var(--glass);border:1px solid var(--glass-border);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-dim);text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.5px;transition:border-color .2s,color .2s,background .2s,box-shadow .2s}
-.social-link:hover{border-color:rgba(255,85,0,.4);color:var(--fire);background:rgba(255,85,0,.08);box-shadow:0 0 16px rgba(255,85,0,.2)}
+
+/* ── SOCIAL ICON BUTTONS ── */
+/* Чтобы изменить ссылку или добавить новую соцсеть — ищите .social-icon-btn[data-net="..."] */
+.social-icon-btn{
+  width:42px;height:42px;
+  background:var(--glass);border:1px solid var(--glass-border);border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
+  transition:border-color .25s,background .25s,box-shadow .25s,transform .2s;
+  position:relative;overflow:hidden;
+}
+.social-icon-btn svg{width:20px;height:20px;fill:var(--text-dim);transition:fill .25s,filter .25s}
+
+/* Telegram — синий */
+.social-icon-btn[data-net="tg"]:hover{
+  border-color:rgba(36,161,222,.6);background:rgba(36,161,222,.12);
+  box-shadow:0 0 18px rgba(36,161,222,.35);transform:translateY(-2px);
+}
+.social-icon-btn[data-net="tg"]:hover svg{fill:#24A1DE;filter:drop-shadow(0 0 6px rgba(36,161,222,.7))}
+
+/* Instagram — розово-оранжевый */
+.social-icon-btn[data-net="ig"]:hover{
+  border-color:rgba(225,48,108,.55);background:rgba(225,48,108,.1);
+  box-shadow:0 0 18px rgba(225,48,108,.3);transform:translateY(-2px);
+}
+.social-icon-btn[data-net="ig"]:hover svg{fill:url(#igGrad);filter:drop-shadow(0 0 6px rgba(225,48,108,.6))}
+
+/* YouTube — красный */
+.social-icon-btn[data-net="yt"]:hover{
+  border-color:rgba(255,0,0,.5);background:rgba(255,0,0,.1);
+  box-shadow:0 0 18px rgba(255,0,0,.3);transform:translateY(-2px);
+}
+.social-icon-btn[data-net="yt"]:hover svg{fill:#FF0000;filter:drop-shadow(0 0 6px rgba(255,0,0,.7))}
+
+/* VK — синий */
+.social-icon-btn[data-net="vk"]:hover{
+  border-color:rgba(0,119,255,.5);background:rgba(0,119,255,.1);
+  box-shadow:0 0 18px rgba(0,119,255,.3);transform:translateY(-2px);
+}
+.social-icon-btn[data-net="vk"]:hover svg{fill:#0077FF;filter:drop-shadow(0 0 6px rgba(0,119,255,.7))}
  
  
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
@@ -2172,10 +2211,50 @@ nav:hover::before{
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 BBNF. Все права защищены.</div>
     <div class="footer-socials">
-  <a href="https://t.me/skeletons_s" class="social-link" target="_blank">TG</a>
-  <a href="https://instagram.com/baban_off.motion" class="social-link" target="_blank">IG</a>
-  <a href="https://youtube.com/@Baban_off_studio" class="social-link" target="_blank">YT</a>
-  <a href="https://vk.com/@igor_babanov" class="social-link" target="_blank">VK</a>
+  <!-- ════ СОЦИАЛЬНЫЕ СЕТИ ════
+       Чтобы изменить ссылку — просто замените href="..."
+       Чтобы убрать иконку — удалите соответствующий <a> блок
+       Чтобы добавить новую — скопируйте любой <a> и поменяйте data-net, href и SVG-иконку
+  ════════════════════════════ -->
+
+  <!-- SVG-градиент для Instagram (один раз, скрытый) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="igGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#F58529"/>
+        <stop offset="50%" stop-color="#DD2A7B"/>
+        <stop offset="100%" stop-color="#515BD4"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <!-- Telegram -->
+  <a href="https://t.me/skeletons_s" class="social-icon-btn" data-net="tg" target="_blank" aria-label="Telegram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.96 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+    </svg>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://instagram.com/baban_off.motion" class="social-icon-btn" data-net="ig" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+    </svg>
+  </a>
+
+  <!-- YouTube -->
+  <a href="https://youtube.com/@Baban_off_studio" class="social-icon-btn" data-net="yt" target="_blank" aria-label="YouTube">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+    </svg>
+  </a>
+
+  <!-- VK -->
+  <a href="https://vk.com/@igor_babanov" class="social-icon-btn" data-net="vk" target="_blank" aria-label="VKontakte">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.862-.525-2.049-1.714-1.033-1.01-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.78.677.863 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.204.17-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.17.508.271.508.22 0 .407-.136.813-.542 1.254-1.406 2.151-3.574 2.151-3.574.119-.254.322-.491.763-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.78 1.203 1.253.745.847 1.32 1.558 1.473 2.05.17.49-.085.745-.576.745z"/>
+    </svg>
+  </a>
 </div>
   </div>
 </footer>
