@@ -488,6 +488,7 @@ section, #hero, #about, footer{overflow:hidden}
  
 /* PORTFOLIO */
 #portfolio{background:transparent}
+#portfolio::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(255,85,0,.25),transparent)}
 .portfolio-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px}
 .portfolio-filters{display:flex;justify-content:flex-start;gap:10px;margin-bottom:40px;flex-wrap:wrap}
 .pf-tab{padding:10px 22px;font-family:'DM Sans',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;border-radius:10px;border:1px solid rgba(255,255,255,.07);background:rgba(15,10,6,.7);color:var(--text-dim);cursor:pointer;transition:.3s;backdrop-filter:blur(10px)}
@@ -1318,11 +1319,10 @@ nav:hover::before{
   <div id="navLiquid" aria-hidden="true"><div id="navSpot"></div><div id="navSpot2"></div></div>
   <a href="#hero" class="nav-logo">BABAN<em>_OFF</em></a>
   <ul class="nav-links">
-    <li><a href="#about">Обо мне</a></li>
-    <li><a href="#services">Услуги</a></li>
-    <li><a href="#trust">Клиенты</a></li>
     <li><a href="#portfolio">Работы</a></li>
-    
+    <li><a href="#trust">Клиенты</a></li>
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#about">Обо мне</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Контакт</a></li>
   </ul>
@@ -1457,165 +1457,6 @@ nav:hover::before{
     <div class="ticker-item"> VIDEO EDITOR <span class="ticker-star">✦</span> REELS &amp; SHORTS <span class="ticker-star">✦</span> MOTION DESIGN <span class="ticker-star">✦</span> COLOR GRADING <span class="ticker-star">✦</span> REAL ESTATE <span class="ticker-star">✦</span> COMMERCIAL PROD <span class="ticker-star">✦</span> VFX &amp; SFX <span class="ticker-star">✦</span> LUXURY VISUAL <span class="ticker-star">✦</span></div>
   </div>
 </div>
- 
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-grid">
-    <div class="about-avatar-wrap aos">
-      <div class="about-ring about-ring-1"></div>
-      <div class="about-ring about-ring-2"></div>
-      <div class="about-ring about-ring-3"></div>
-      <div class="about-circle">
-        <!-- 📸 Замените src на путь к вашему фото: src="photoava.jpg" -->
-        <img src="photoava.jpg" alt="BBNF" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-        <div class="about-avatar-placeholder" style="display:none">B</div>
-      </div>
-    </div>
-    <div class="about-content">
-      <div class="section-eyebrow">Обо мне</div>
-      <h2 class="about-title aos">РЕЖИССЁР МОНТАЖА,<br>КОТОРЫЙ СОЗДАЁТ<br><span class="accent">ДОРОГОЙ СТИЛЬ</span></h2>
-      <p class="about-bio aos">Привет! Меня зовут <strong>Игорь (BABAN_OFF)</strong>. За <strong>3+ года</strong> в коммерческом постпродакшене я создал более <strong>1200 видеороликов</strong> — от имиджевых Reels для бизнеса в Дубае до масштабных 3D-презентаций и криптопромо. Мой подход основан на <strong>«архитектуре кадра»</strong>: я не продаю мифы о «случайных миллионах просмотров», а выстраиваю темпоритм, моушн-графику и саунд-дизайн так, чтобы <strong>выделить вас среди шаблонных конкурентов</strong> и удержать внимание платёжеспособного зрителя до последней секунды.<br><br>Каждый кадр — это работа на <strong>ваш статус и конверсию</strong>.</p>
-      <div class="about-skills aos">
-        <div class="skill-row"><div class="skill-name">High-End Editing</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="98%"></div></div><div class="skill-pct">98%</div></div>
-        <div class="skill-row"><div class="skill-name">Motion &amp; 3D VFX</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="98%"></div></div><div class="skill-pct">98%</div></div>
-        <div class="skill-row"><div class="skill-name">Sound Architecture</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="96%"></div></div><div class="skill-pct">96%</div></div>
-        <div class="skill-row"><div class="skill-name">Cinema Color Grade</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="95%"></div></div><div class="skill-pct">95%</div></div>
-      </div>
-      <div class="about-badges aos">
-       <div class="about-badge"><span><img src="prpro.png" style="width:22px; height:22px; vertical-align:middle;"></span> Premiere Pro</div>
-        <div class="about-badge"><span><img src="ae.png" style="width:22px; height:22px; vertical-align:middle;"></span> After Effects</div>
-        <div class="about-badge"><span><img src="dv.png" style="width:22px; height:22px; vertical-align:middle;"></span> DaVinci Resolve</div>
-        <div class="about-badge"><span><img src="au.png" style="width:22px; height:22px; vertical-align:middle;"></span> Audition</div>
-        </div>
-    </div>
-  </div>
-</section>
- 
-<!-- PAIN POINTS -->
-<section id="pain">
-  <div class="pain-bg-glow"></div>
-  <div class="pain-intro aos">
-    <div class="section-eyebrow">Стандарты продакшена</div>
-    <h2 class="section-title">ПОЧЕМУ СО МНОЙ <span class="accent">РАБОТАЮТ</span><br>ЛИДЕРЫ РЫНКА</h2>
-    <p class="section-desc">Вы покупаете не просто часы работы в программе, а предсказуемый сервис, автономность и визуальное превосходство над конкурентами.</p>
-  </div>
-  <div class="pain-grid">
- 
-    <div class="pain-card aos">
-      <div class="pain-solution-tag">✓ РЕШЕНО</div>
-      <div class="pain-problem-label">Частая боль #1</div>
-      <div class="pain-icon-wrap">
-        <img src="offline.png" class="offline" style="width: 72px; height: 72px; object-fit: contain;">
-      </div>
-      <div class="pain-headline">Потеря связи на полпути</div>
-      <p class="pain-problem-text">Отправили исходники и сутками ждёте статуса проекта. Непонятно, на каком этапе ролик, пока до релиза остаются считанные часы.</p>
-      <div class="pain-divider"></div>
-      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Отвечаю <strong>в течение 1–2 часов</strong> в рабочее время. Прозрачный статус проекта на каждом этапе без необходимости напоминать о себе.</div></div>
-    </div>
- 
-    <div class="pain-card aos">
-      <div class="pain-solution-tag">✓ РЕШЕНО</div>
-      <div class="pain-problem-label">Частая боль #2</div>
-      <div class="pain-icon-wrap">
-        <!-- <img src="icons/pain-2-deadline.png" class="pain-icon-img" alt=""> -->
-        <img src="sroki.png" class="sroki" style="width: 112px; height: 112px; object-fit: contain;">
-      </div>
-      <div class="pain-headline">Срываются запуски и релизы</div>
-      <p class="pain-problem-text">Из-за затянутого постпродакшена слетает контент-план, переносится старт рекламной кампании и простаивает команда маркетинга.</p>
-      <div class="pain-divider"></div>
-      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Фиксирую точную дату сдачи до старта. <strong>За 3+ года — ни одного сорванного релиза.</strong> Ваш контент выходит строго по графику.</div></div>
-    </div>
- 
-    <div class="pain-card aos">
-      <div class="pain-solution-tag">✓ РЕШЕНО</div>
-      <div class="pain-problem-label">Частая боль #3</div>
-      <div class="pain-icon-wrap">
-        <!-- <img src="icons/pain-3-contract.png" class="pain-icon-img" alt=""> -->
-        <img src="nedovolen.png" class="nedovolen" style="width: 72px; height: 72px; object-fit: contain;">
-      </div>
-      <div class="pain-headline">Трение и споры на этапе правок</div>
-      <p class="pain-problem-text">Исполнители требуют доплату за малейшую корректировку титров, болезненно реагируют на комментарии и работают только по сухой указке.</p>
-      <div class="pain-divider"></div>
-      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Партнёрский сервис с чёткими условиями. <strong>2 раунда правок уже включены</strong> в стоимость, а оплата делится комфортно — 50/50.</div></div>
-    </div>
- 
-    <div class="pain-card aos">
-      <div class="pain-solution-tag">✓ РЕШЕНО</div>
-      <div class="pain-problem-label">Частая боль #4</div>
-      <div class="pain-icon-wrap">
-        <!-- <img src="icons/pain-4-chart.png" class="pain-icon-img" alt=""> -->
-        <img src="grafic.png" class="grafic" style="width: 72px; height: 72px; object-fit: contain;">
-      </div>
-      <div class="pain-headline">Контент выглядит дешевле продукта</div>
-      <p class="pain-problem-text">У вас сильный и дорогой продукт, но из-за шаблонной склейки «как у всех» видео сливается с лентой и не вызывает доверия у премиум-клиентов.</p>
-      <div class="pain-divider"></div>
-      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Создаю <strong>уникальный визуальный почерк</strong> за счёт Motion-графики, 3D и саунд-дизайна. Зритель с первых секунд считывает ваш высокий чек.</div></div>
-    </div>
- 
-    <div class="pain-card aos">
-      <div class="pain-solution-tag">✓ РЕШЕНО</div>
-      <div class="pain-problem-label">Частая боль #5</div>
-      <div class="pain-icon-wrap">
-        <!-- <img src="icons/pain-5-time.png" class="pain-icon-img" alt=""> -->
-        <img src="clock.png" class="clock" style="width: 72px; height: 72px; object-fit: contain;">
-      </div>
-      <div class="pain-headline">Нет времени писать длинные ТЗ</div>
-      <p class="pain-problem-text">Вместо фокуса на бизнесе приходится тратить часы на расписывание каждой склейки, поиск референсов и микроменеджмент подрядчика.</p>
-      <div class="pain-divider"></div>
-      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Достаточно <strong>15-минутного брифа</strong> или голосового. Я сам предлагаю режиссёрские решения, выстраиваю динамику и сдаю готовый продукт.</div></div>
-    </div>
- 
-    <div class="pain-card aos">
-      <div class="pain-solution-tag">✓ РЕШЕНО</div>
-      <div class="pain-problem-label">Частая боль #6</div>
-      <div class="pain-icon-wrap">
-        <!-- <img src="icons/pain-6-repeat.png" class="pain-icon-img" alt=""> -->
-        <img src="poisk.png" class="poisk" style="width: 105px; height: 105px; object-fit: contain;">
-      </div>
-      <div class="pain-headline">Разрозненный стиль от ролика к ролику</div>
-      <p class="pain-problem-text">При смене исполнителей визуальный код бренда рассыпается: скачут шрифты, цвет и динамика, из-за чего пропадает узнаваемость.</p>
-      <div class="pain-divider"></div>
-      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Ваши ролики будут <strong>выглядеть дорого и узнаваемо</strong> в единой дизайн-системе. Один раз настраиваем стиль — и выпуск контента работает как часы.</div></div>
-    </div>
- 
-  </div>
-</section>
- 
-<!-- SERVICES -->
-<section id="services">
-  <div class="section-eyebrow">Что я делаю</div>
-  <h2 class="section-title">УСЛУГИ &amp; <span class="accent">ФОРМАТЫ</span></h2>
-  <p class="section-desc">Создаю видео под любую платформу и задачу — от короткого Reels до полноценного рекламного ролика.</p>
-  <div class="services-grid">
-    <div class="service-card aos"><span class="service-num">01</span><div class="service-icon-wrap"><img src="montage.png" style="width: 62px; height: 62px; object-fit: contain;"></div><div class="service-title">Длинный Формат</div><p class="service-desc">Режиссура горизонтальных выпусков, интервью и презентаций. Удерживающая динамика, инфографика, чистый звук и продуманная структура без провисаний.</p><div class="service-tags"><span class="tag">YouTube</span><span class="tag">VK Video</span><span class="tag">Презентации</span></div></div>
-    <div class="service-card aos"><span class="service-num">02</span><div class="service-icon-wrap"><img src="reels.png" style="width: 42px; height: 42px; object-fit: contain;"></div><div class="service-title">Премиум Reels &amp; Shorts</div><p class="service-desc">Имиджевая упаковка вертикальных роликов. Кастомная моушн-графика, темпоритм и плотный саунд-дизайн, которые выделяют вас из ленты и продают статус.</p><div class="service-tags"><span class="tag">Reels</span><span class="tag">Shorts</span><span class="tag">Motion</span></div></div>
-    <div class="service-card aos"><span class="service-num">03</span><div class="service-icon-wrap"><img src="rost.png" style="width: 42px; height: 42px; object-fit: contain;"></div><div class="service-title">Рекламные Промо</div><p class="service-desc">Коммерческие креативы и презентационные ролики для бизнеса, криптопроектов и недвижимости. Визуал, который конвертирует внимание зрителя в заявку.</p><div class="service-tags"><span class="tag">Промо</span><span class="tag">Крипта</span><span class="tag">Недвижимость</span></div></div>
-    <div class="service-card aos"><span class="service-num">04</span><div class="service-icon-wrap"><img src="palitra.png" style="width: 62px; height: 62px; object-fit: contain;"></div><div class="service-title">Кинематографичный Цвет</div><p class="service-desc">Глубокий Color Grading в DaVinci Resolve. Приводим исходники к дорогому киношному стандарту и выстраиваем фирменную цветовую палитру бренда.</p><div class="service-tags"><span class="tag">Color Grading</span><span class="tag">DaVinci</span><span class="tag">Стиль</span></div></div>
-    <div class="service-card aos"><span class="service-num">05</span><div class="service-icon-wrap"><img src="motion.png" style="width: 62px; height: 62px; object-fit: contain;"></div><div class="service-title">Motion Graphics &amp; 3D</div><p class="service-desc">Оживление сложных смыслов через графику. 3D-сцены, анимированные интерфейсы, логотипы и авторские переходы, созданные в After Effects с нуля.</p><div class="service-tags"><span class="tag">After Effects</span><span class="tag">3D &amp; VFX</span><span class="tag">Интро</span></div></div>
-    <div class="service-card aos"><span class="service-num">06</span><div class="service-icon-wrap"><img src="calendar.png" style="width: 47px; height: 47px; object-fit: contain;"></div><div class="service-title">Постоянный Продакшн</div><p class="service-desc">Комплексное ведение визуала для экспертов, агентств и компаний. Приоритетное бронирование слотов, единая дизайн-система и выпуск контента под ключ.</p><div class="service-tags"><span class="tag">Ежемесячно</span><span class="tag">Пакет</span><span class="tag">Приоритет</span></div></div>
-  </div>
-</section>
- 
-<!-- PROCESS -->
-<section id="process">
-  <div class="section-eyebrow">Как это работает</div>
-  <h2 class="section-title">ПРОЦЕСС <span class="accent">РАБОТЫ</span></h2>
-  <p class="section-desc">Прозрачно, чётко, без лишних итераций. Готовое видео — уже через несколько дней.</p>
-  <div class="process-steps">
-    <div class="process-connector"></div>
-    <!-- animated particles along connector line -->
-    <div class="process-connector-shapes" aria-hidden="true">
-      <span class="pcs pcs-1">◆</span>
-      <span class="pcs pcs-2">●</span>
-      <span class="pcs pcs-3">◆</span>
-      <span class="pcs pcs-4">●</span>
-    </div>
-    <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">01</div></div><div class="step-title">Заявка и бриф</div><p class="step-desc">Вы заполняете форму или пишете в Telegram. Обсуждаем задачу, формат и референсы.</p></div>
-    <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">02</div></div><div class="step-title">Передача материала</div><p class="step-desc">Вы отправляете или загружаете исходники в удобный облачный сервис. Я принимаю в работу в течение 24 часов.</p></div>
-    <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">03</div></div><div class="step-title">Монтаж и правки</div><p class="step-desc">Сдаю первую версию в обговоренный срок. До 2 раундов правок включены в стоимость.</p></div>
-    <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">04</div></div><div class="step-title">Финальная сдача</div><p class="step-desc">Готовое видео в нужных форматах. Вы публикуете — и получаете результат. Всё чисто.</p></div>
-  </div>
-</section>
  
 <!-- PORTFOLIO -->
  
@@ -2054,6 +1895,165 @@ nav:hover::before{
 
  
  
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-eyebrow">Что я делаю</div>
+  <h2 class="section-title">УСЛУГИ &amp; <span class="accent">ФОРМАТЫ</span></h2>
+  <p class="section-desc">Создаю видео под любую платформу и задачу — от короткого Reels до полноценного рекламного ролика.</p>
+  <div class="services-grid">
+    <div class="service-card aos"><span class="service-num">01</span><div class="service-icon-wrap"><img src="montage.png" style="width: 62px; height: 62px; object-fit: contain;"></div><div class="service-title">Длинный Формат</div><p class="service-desc">Режиссура горизонтальных выпусков, интервью и презентаций. Удерживающая динамика, инфографика, чистый звук и продуманная структура без провисаний.</p><div class="service-tags"><span class="tag">YouTube</span><span class="tag">VK Video</span><span class="tag">Презентации</span></div></div>
+    <div class="service-card aos"><span class="service-num">02</span><div class="service-icon-wrap"><img src="reels.png" style="width: 42px; height: 42px; object-fit: contain;"></div><div class="service-title">Премиум Reels &amp; Shorts</div><p class="service-desc">Имиджевая упаковка вертикальных роликов. Кастомная моушн-графика, темпоритм и плотный саунд-дизайн, которые выделяют вас из ленты и продают статус.</p><div class="service-tags"><span class="tag">Reels</span><span class="tag">Shorts</span><span class="tag">Motion</span></div></div>
+    <div class="service-card aos"><span class="service-num">03</span><div class="service-icon-wrap"><img src="rost.png" style="width: 42px; height: 42px; object-fit: contain;"></div><div class="service-title">Рекламные Промо</div><p class="service-desc">Коммерческие креативы и презентационные ролики для бизнеса, криптопроектов и недвижимости. Визуал, который конвертирует внимание зрителя в заявку.</p><div class="service-tags"><span class="tag">Промо</span><span class="tag">Крипта</span><span class="tag">Недвижимость</span></div></div>
+    <div class="service-card aos"><span class="service-num">04</span><div class="service-icon-wrap"><img src="palitra.png" style="width: 62px; height: 62px; object-fit: contain;"></div><div class="service-title">Кинематографичный Цвет</div><p class="service-desc">Глубокий Color Grading в DaVinci Resolve. Приводим исходники к дорогому киношному стандарту и выстраиваем фирменную цветовую палитру бренда.</p><div class="service-tags"><span class="tag">Color Grading</span><span class="tag">DaVinci</span><span class="tag">Стиль</span></div></div>
+    <div class="service-card aos"><span class="service-num">05</span><div class="service-icon-wrap"><img src="motion.png" style="width: 62px; height: 62px; object-fit: contain;"></div><div class="service-title">Motion Graphics &amp; 3D</div><p class="service-desc">Оживление сложных смыслов через графику. 3D-сцены, анимированные интерфейсы, логотипы и авторские переходы, созданные в After Effects с нуля.</p><div class="service-tags"><span class="tag">After Effects</span><span class="tag">3D &amp; VFX</span><span class="tag">Интро</span></div></div>
+    <div class="service-card aos"><span class="service-num">06</span><div class="service-icon-wrap"><img src="calendar.png" style="width: 47px; height: 47px; object-fit: contain;"></div><div class="service-title">Постоянный Продакшн</div><p class="service-desc">Комплексное ведение визуала для экспертов, агентств и компаний. Приоритетное бронирование слотов, единая дизайн-система и выпуск контента под ключ.</p><div class="service-tags"><span class="tag">Ежемесячно</span><span class="tag">Пакет</span><span class="tag">Приоритет</span></div></div>
+  </div>
+</section>
+ 
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-avatar-wrap aos">
+      <div class="about-ring about-ring-1"></div>
+      <div class="about-ring about-ring-2"></div>
+      <div class="about-ring about-ring-3"></div>
+      <div class="about-circle">
+        <!-- 📸 Замените src на путь к вашему фото: src="photoava.jpg" -->
+        <img src="photoava.jpg" alt="BBNF" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="about-avatar-placeholder" style="display:none">B</div>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="section-eyebrow">Обо мне</div>
+      <h2 class="about-title aos">РЕЖИССЁР МОНТАЖА,<br>КОТОРЫЙ СОЗДАЁТ<br><span class="accent">ДОРОГОЙ СТИЛЬ</span></h2>
+      <p class="about-bio aos">Привет! Меня зовут <strong>Игорь (BABAN_OFF)</strong>. За <strong>3+ года</strong> в коммерческом постпродакшене я создал более <strong>1200 видеороликов</strong> — от имиджевых Reels для бизнеса в Дубае до масштабных 3D-презентаций и криптопромо. Мой подход основан на <strong>«архитектуре кадра»</strong>: я не продаю мифы о «случайных миллионах просмотров», а выстраиваю темпоритм, моушн-графику и саунд-дизайн так, чтобы <strong>выделить вас среди шаблонных конкурентов</strong> и удержать внимание платёжеспособного зрителя до последней секунды.<br><br>Каждый кадр — это работа на <strong>ваш статус и конверсию</strong>.</p>
+      <div class="about-skills aos">
+        <div class="skill-row"><div class="skill-name">High-End Editing</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="98%"></div></div><div class="skill-pct">98%</div></div>
+        <div class="skill-row"><div class="skill-name">Motion &amp; 3D VFX</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="98%"></div></div><div class="skill-pct">98%</div></div>
+        <div class="skill-row"><div class="skill-name">Sound Architecture</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="96%"></div></div><div class="skill-pct">96%</div></div>
+        <div class="skill-row"><div class="skill-name">Cinema Color Grade</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="95%"></div></div><div class="skill-pct">95%</div></div>
+      </div>
+      <div class="about-badges aos">
+       <div class="about-badge"><span><img src="prpro.png" style="width:22px; height:22px; vertical-align:middle;"></span> Premiere Pro</div>
+        <div class="about-badge"><span><img src="ae.png" style="width:22px; height:22px; vertical-align:middle;"></span> After Effects</div>
+        <div class="about-badge"><span><img src="dv.png" style="width:22px; height:22px; vertical-align:middle;"></span> DaVinci Resolve</div>
+        <div class="about-badge"><span><img src="au.png" style="width:22px; height:22px; vertical-align:middle;"></span> Audition</div>
+        </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- PAIN POINTS -->
+<section id="pain">
+  <div class="pain-bg-glow"></div>
+  <div class="pain-intro aos">
+    <div class="section-eyebrow">Стандарты продакшена</div>
+    <h2 class="section-title">ПОЧЕМУ СО МНОЙ <span class="accent">РАБОТАЮТ</span><br>ЛИДЕРЫ РЫНКА</h2>
+    <p class="section-desc">Вы покупаете не просто часы работы в программе, а предсказуемый сервис, автономность и визуальное превосходство над конкурентами.</p>
+  </div>
+  <div class="pain-grid">
+ 
+    <div class="pain-card aos">
+      <div class="pain-solution-tag">✓ РЕШЕНО</div>
+      <div class="pain-problem-label">Частая боль #1</div>
+      <div class="pain-icon-wrap">
+        <img src="offline.png" class="offline" style="width: 72px; height: 72px; object-fit: contain;">
+      </div>
+      <div class="pain-headline">Потеря связи на полпути</div>
+      <p class="pain-problem-text">Отправили исходники и сутками ждёте статуса проекта. Непонятно, на каком этапе ролик, пока до релиза остаются считанные часы.</p>
+      <div class="pain-divider"></div>
+      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Отвечаю <strong>в течение 1–2 часов</strong> в рабочее время. Прозрачный статус проекта на каждом этапе без необходимости напоминать о себе.</div></div>
+    </div>
+ 
+    <div class="pain-card aos">
+      <div class="pain-solution-tag">✓ РЕШЕНО</div>
+      <div class="pain-problem-label">Частая боль #2</div>
+      <div class="pain-icon-wrap">
+        <!-- <img src="icons/pain-2-deadline.png" class="pain-icon-img" alt=""> -->
+        <img src="sroki.png" class="sroki" style="width: 112px; height: 112px; object-fit: contain;">
+      </div>
+      <div class="pain-headline">Срываются запуски и релизы</div>
+      <p class="pain-problem-text">Из-за затянутого постпродакшена слетает контент-план, переносится старт рекламной кампании и простаивает команда маркетинга.</p>
+      <div class="pain-divider"></div>
+      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Фиксирую точную дату сдачи до старта. <strong>За 3+ года — ни одного сорванного релиза.</strong> Ваш контент выходит строго по графику.</div></div>
+    </div>
+ 
+    <div class="pain-card aos">
+      <div class="pain-solution-tag">✓ РЕШЕНО</div>
+      <div class="pain-problem-label">Частая боль #3</div>
+      <div class="pain-icon-wrap">
+        <!-- <img src="icons/pain-3-contract.png" class="pain-icon-img" alt=""> -->
+        <img src="nedovolen.png" class="nedovolen" style="width: 72px; height: 72px; object-fit: contain;">
+      </div>
+      <div class="pain-headline">Трение и споры на этапе правок</div>
+      <p class="pain-problem-text">Исполнители требуют доплату за малейшую корректировку титров, болезненно реагируют на комментарии и работают только по сухой указке.</p>
+      <div class="pain-divider"></div>
+      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Партнёрский сервис с чёткими условиями. <strong>2 раунда правок уже включены</strong> в стоимость, а оплата делится комфортно — 50/50.</div></div>
+    </div>
+ 
+    <div class="pain-card aos">
+      <div class="pain-solution-tag">✓ РЕШЕНО</div>
+      <div class="pain-problem-label">Частая боль #4</div>
+      <div class="pain-icon-wrap">
+        <!-- <img src="icons/pain-4-chart.png" class="pain-icon-img" alt=""> -->
+        <img src="grafic.png" class="grafic" style="width: 72px; height: 72px; object-fit: contain;">
+      </div>
+      <div class="pain-headline">Контент выглядит дешевле продукта</div>
+      <p class="pain-problem-text">У вас сильный и дорогой продукт, но из-за шаблонной склейки «как у всех» видео сливается с лентой и не вызывает доверия у премиум-клиентов.</p>
+      <div class="pain-divider"></div>
+      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Создаю <strong>уникальный визуальный почерк</strong> за счёт Motion-графики, 3D и саунд-дизайна. Зритель с первых секунд считывает ваш высокий чек.</div></div>
+    </div>
+ 
+    <div class="pain-card aos">
+      <div class="pain-solution-tag">✓ РЕШЕНО</div>
+      <div class="pain-problem-label">Частая боль #5</div>
+      <div class="pain-icon-wrap">
+        <!-- <img src="icons/pain-5-time.png" class="pain-icon-img" alt=""> -->
+        <img src="clock.png" class="clock" style="width: 72px; height: 72px; object-fit: contain;">
+      </div>
+      <div class="pain-headline">Нет времени писать длинные ТЗ</div>
+      <p class="pain-problem-text">Вместо фокуса на бизнесе приходится тратить часы на расписывание каждой склейки, поиск референсов и микроменеджмент подрядчика.</p>
+      <div class="pain-divider"></div>
+      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Достаточно <strong>15-минутного брифа</strong> или голосового. Я сам предлагаю режиссёрские решения, выстраиваю динамику и сдаю готовый продукт.</div></div>
+    </div>
+ 
+    <div class="pain-card aos">
+      <div class="pain-solution-tag">✓ РЕШЕНО</div>
+      <div class="pain-problem-label">Частая боль #6</div>
+      <div class="pain-icon-wrap">
+        <!-- <img src="icons/pain-6-repeat.png" class="pain-icon-img" alt=""> -->
+        <img src="poisk.png" class="poisk" style="width: 105px; height: 105px; object-fit: contain;">
+      </div>
+      <div class="pain-headline">Разрозненный стиль от ролика к ролику</div>
+      <p class="pain-problem-text">При смене исполнителей визуальный код бренда рассыпается: скачут шрифты, цвет и динамика, из-за чего пропадает узнаваемость.</p>
+      <div class="pain-divider"></div>
+      <div class="pain-solution"><div class="pain-check">✓</div><div class="pain-solution-text">Ваши ролики будут <strong>выглядеть дорого и узнаваемо</strong> в единой дизайн-системе. Один раз настраиваем стиль — и выпуск контента работает как часы.</div></div>
+    </div>
+ 
+  </div>
+</section>
+ 
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-eyebrow">Как это работает</div>
+  <h2 class="section-title">ПРОЦЕСС <span class="accent">РАБОТЫ</span></h2>
+  <p class="section-desc">Прозрачно, чётко, без лишних итераций. Готовое видео — уже через несколько дней.</p>
+  <div class="process-steps">
+    <div class="process-connector"></div>
+    <!-- animated particles along connector line -->
+    <div class="process-connector-shapes" aria-hidden="true">
+      <span class="pcs pcs-1">◆</span>
+      <span class="pcs pcs-2">●</span>
+      <span class="pcs pcs-3">◆</span>
+      <span class="pcs pcs-4">●</span>
+    </div>
+    <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">01</div></div><div class="step-title">Заявка и бриф</div><p class="step-desc">Вы заполняете форму или пишете в Telegram. Обсуждаем задачу, формат и референсы.</p></div>
+    <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">02</div></div><div class="step-title">Передача материала</div><p class="step-desc">Вы отправляете или загружаете исходники в удобный облачный сервис. Я принимаю в работу в течение 24 часов.</p></div>
+    <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">03</div></div><div class="step-title">Монтаж и правки</div><p class="step-desc">Сдаю первую версию в обговоренный срок. До 2 раундов правок включены в стоимость.</p></div>
+    <div class="process-step aos"><div class="step-num-wrap"><div class="step-ring-outer"></div><div class="step-inner">04</div></div><div class="step-title">Финальная сдача</div><p class="step-desc">Готовое видео в нужных форматах. Вы публикуете — и получаете результат. Всё чисто.</p></div>
+  </div>
+</section>
+ 
 <!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="section-eyebrow">Отзывы</div>
@@ -2254,7 +2254,7 @@ nav:hover::before{
       <div class="footer-logo">BABAN<em>_OFF</em></div>
       <div class="footer-tagline">Режиссура монтажа &amp; Motion Design для лидеров рынка</div>
     </div>
-    <div class="footer-links-group"><h5>Навигация</h5><ul><li><a href="#about">Обо мне</a></li><li><a href="#services">Услуги</a></li><li><a href="#portfolio">Работы</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+    <div class="footer-links-group"><h5>Навигация</h5><ul><li><a href="#portfolio">Работы</a></li><li><a href="#trust">Клиенты</a></li><li><a href="#services">Услуги</a></li><li><a href="#about">Обо мне</a></li></ul></div>
     <div class="footer-links-group"><h5>Информация</h5><ul><li><a href="#faq">FAQ</a></li><li><a href="#testimonials">Отзывы</a></li><li><a href="#contact">Контакты</a></li><li><a href="#">Конфиденциальность</a></li></ul></div>
     <div class="footer-links-group"><h5>Контакт</h5><ul><li><a href="https://t.me/skeletons_s">Telegram</a></li><li><a href="https://instagram.com/baban_off.motion">Instagram</a></li><li><a href="https://youtube.com/@Baban_off_studio">YouTube</a></li><li><a href="mailto:i2062030@gmail.com">Email</a></li></ul></div>
   </div>
@@ -2455,7 +2455,7 @@ function toggleMenu(){
   if(menuOpen){
     const m=document.createElement('div');m.id='mobileMenu';
     m.style.cssText='position:fixed;top:72px;left:3%;right:3%;background:rgba(10,8,6,.97);backdrop-filter:blur(24px);border:1px solid rgba(255,85,0,.15);border-radius:16px;z-index:999;padding:20px 24px;';
-    const links=[['Обо мне','about'],['Услуги','services'],['Боли','pain'],['Работы','portfolio'],['FAQ','faq'],['Контакт','contact']];
+    const links=[['Работы','portfolio'],['Клиенты','trust'],['Услуги','services'],['Обо мне','about'],['Стандарты','pain'],['FAQ','faq'],['Контакт','contact']];
     m.innerHTML=links.map(([text,anchor],i)=>{
       const last=i===links.length-1;
       return `<a href="#${anchor}" onclick="closeMobileMenu()" style="display:block;color:${last?'#fff':'#A89880'};text-decoration:none;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.06);font-weight:600;font-size:13px;letter-spacing:1px;${last?'background:linear-gradient(135deg,#FF5500,#FF7A2F);margin-top:14px;padding:13px 20px;border-bottom:none;border-radius:8px;text-align:center;':''}">${text}</a>`;
@@ -2800,7 +2800,7 @@ window.addEventListener('load',()=>{if(!window.location.hash)window.scrollTo(0,0
         if (!start) start = ts;
         const prog = Math.min((ts - start) / dur, 1);
         const ease = 1 - Math.pow(1 - prog, 3);
-        const cur = isFloat ? (target * ease).toFixed(1) : Math.floor(target * ease);
+        const cur = isFloat ? (target * ease).toFixed(1) : Math.round(target * ease);
         el.innerHTML = cur + unitHTML;
         if (prog < 1) requestAnimationFrame(step);
       };
@@ -2996,5 +2996,3 @@ document.querySelectorAll('a,button,.service-card,.pricing-card,.review-card,.pf
 </script>
 </body>
 </html>
-index.html
-Показан объект "index.html".
